@@ -1,0 +1,63 @@
+.price {
+  background-color: $stripe-bg-color;
+
+  &__table {
+
+    margin: 0 auto;
+    border-collapse: collapse;
+
+    thead {
+      @include font(18px, 30px);
+
+      color: $white;
+      background-color: $thead-bg-color;
+    }
+  }
+
+  &__plan {
+    @include font(18px, 30px);
+
+    padding: 18px 23px;
+    text-align: center;
+    border: 2px solid $thead-bg-color;
+
+    &--base {
+      border-right-color: $table-border-color;
+    }
+
+    &--standart {
+      border-left-color: $table-border-color;
+      border-right-color: $table-border-color;
+    }
+
+    &--hit {
+      background-image: url('../img/bg-hit.svg');
+      background-repeat: no-repeat;
+      background-position:  0 0;
+    }
+  }
+
+  &__plan-name {
+    @include font(18px, 30px, bold);
+
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__plan-price {
+    @include font(24px, 30px, 300);
+
+    color: $white;
+  }
+
+  &__feature {
+    @include font(14px, 30px);
+
+    padding: 18px 23px;
+    color: $gray-font-color;
+    text-align: left;
+    text-transform: uppercase;
+    border: 2px solid $table-border-color;
+    background-color: $white;
+  }
+}

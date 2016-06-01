@@ -1,0 +1,34 @@
+.information {
+  @include font(24px, auto, 300);
+
+  background-color: $stripe-bg-color;
+  text-align: center;
+
+  &__slogan {
+    color: $gray-font-color;
+    background-color: $white;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__item {
+
+    h3 {
+      @include font(18px, 24px, bold);
+
+      margin: 0;
+      margin-bottom: 12px;
+      color: $black;
+    }
+
+    p {
+      @include font();
+
+      margin: 0;
+      margin-bottom: 35px;
+      color: $gray-font-color;
+    }
+  }
+}

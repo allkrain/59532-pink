@@ -1,0 +1,10 @@
+.download-block {
+  background: $download-bg-color;
+  text-align: center;
+
+  p {
+    @include font(14px, 24px, 300);
+
+    color: $white;
+  }
+}

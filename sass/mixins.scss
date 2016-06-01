@@ -1,0 +1,6 @@
+@mixin font($fsize: 14px, $lheight: 24px, $fweight: normal) {
+  font-family: $font-stack;
+  font-size: $fsize;
+  line-height: $lheight;
+  font-weight: $fweight;
+}
