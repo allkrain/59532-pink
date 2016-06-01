@@ -7,22 +7,22 @@
   <body>
     <header class="main-header">
       <nav class="main-menu">
+        <div class="main-menu__item">
+          <a class="logo" href="index.html">Pink</a>
+          <button class="main-menu__btn" type="button">Меню</button>
+        </div>
         <ul class="main-menu__list">
-          <li class="main-menu__item main-menu__navigation">
-            <a href="index.html">Pink</a>
-            <button class="main-menu__btn" type="button">Меню</button>
+          <li>
+            <a class="main-menu__item" href="index.html">Главная</a>
           </li>
-          <li class="main-menu__item">
-            <a href="index.html">Главная</a>
+          <li>
+            <a class="main-menu__item main-menu__item--active">Фотографии</a>
           </li>
-          <li class="main-menu__item main-menu__item--active">
-            <a>Фотографии</a>
+          <li>
+            <a class="main-menu__item" href="contest.html">Конкурс</a>
           </li>
-          <li class="main-menu__item">
-            <a href="contest.html">Конкурс</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="https://htmlacademy.ru">HTML Academy</a>
+          <li>
+            <a class="main-menu__item" href="https://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -39,106 +39,134 @@
             <a class="gallery__image" href="photo-page.html">
               <img src="img/photo.jpg" alt="" width="320" height="110">
             </a>
-            <blockquote class="comment">
-              <span class="comment__autor">
-                <b class="comment__autor-name">Анна</b>
+            <div class="comment">
+              <div class="comment__author">
+                <b class="comment__author-name">Анна</b>
                 <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(5 минут назад)</time>
-              </span>
-              <p>
-                Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
-              </p>
-              <span class="comment__likes">Нарвится: 215</span>
-            </blockquote>
+              </div>
+              <div class="comment__content">
+                <p>
+                  Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
+                </p>
+              </div>
+              <div class="comment__likes">
+                <span>Нравится: 215</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__image" href="photo-page.html">
               <img src="img/photo.jpg" alt="" width="280" height="180">
             </a>
-            <blockquote class="comment">
-              <span class="comment__autor">
-                <b class="comment__autor-name">Левон</b>
+            <div class="comment">
+              <div class="comment__author">
+                <b class="comment__author-name">Левон</b>
                 <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(5 часов назад)</time>
-              </span>
-              <p>
-                Вчера он на луну летал, сегодня в руки к нам попал.
-              </p>
-              <span class="comment__likes">Нравится: 356</span>
-            </blockquote>
+              </div>
+              <div class="comment__content">
+                <p>
+                  Вчера он на луну летал, сегодня в руки к нам попал.
+                </p>
+              </div>
+              <div class="comment__likes">
+                <span>Нравится: 356</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__image" href="photo-page.html">
               <img src="img/photo.jpg" alt="" width="280" height="180">
             </a>
-            <blockquote class="comment">
-              <span class="comment__autor">
-                <b class="comment__autor-name">Антон</b>
+            <div class="comment">
+              <div class="comment__author">
+                <b class="comment__author-name">Антон</b>
                 <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(12 часов назад)</time>
-              </span>
-              <p>
-                Соседи будут рады!
-              </p>
-              <span class="comment__likes">Нравится: 666</span>
-            </blockquote>
+              </div>
+              <div class="comment__content">
+                <p>
+                  Соседи будут рады!
+                </p>
+              </div>
+              <div class="comment__likes">
+                <span>Нравится: 666</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__image" href="photo-page.html">
               <img src="img/photo.jpg" alt="" width="280" height="180">
             </a>
-            <blockquote class="comment">
-              <span class="comment__autor">
-                <b class="comment__autor-name">Борис</b>
+            <div class="comment">
+              <div class="comment__author">
+                <b class="comment__author-name">Борис</b>
                 <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(20 часов назад)</time>
-              </span>
-              <p>
-                Здесь могла быть ваша цитата о высоком и вечном.
-              </p>
-              <span class="comment__likes">Нравится: 215</span>
-            </blockquote>
+              </div>
+              <div class="comment__content">
+                <p>
+                  Здесь могла быть ваша цитата о высоком и вечном.
+                </p>
+              </div>
+              <div class="comment__likes">
+                <span>Нравится: 215</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__image" href="photo-page.html">
               <img src="img/photo.jpg" alt="" width="280" height="180">
             </a>
-            <blockquote class="comment">
-              <span class="comment__autor">
-                <b class="comment__autor-name">Сергей</b>
+            <div class="comment">
+              <div class="comment__author">
+                <b class="comment__author-name">Сергей</b>
                 <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(25 часов назад)</time>
-              </span>
-              <p>
-                Самая кубанская в мире!
-              </p>
-              <span class="comment__likes">Нравится: 4</span>
-            </blockquote>
+              </div>
+              <div class="comment__content">
+                <p>
+                  Самая кубанская в мире!
+                </p>
+              </div>
+              <div class="comment__likes">
+                <span>Нравится: 4</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__image" href="photo-page.html">
               <img src="img/photo.jpg" alt="" width="280" height="180">
             </a>
-            <blockquote class="comment">
-              <span class="comment__autor">
-                <b class="comment__autor-name">Максим</b>
+            <div class="comment">
+              <div class="comment__author">
+                <b class="comment__author-name">Максим</b>
                 <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(40 часов назад)</time>
-              </span>
-              <p>
-                Где снег-то?
-              </p>
-              <span class="comment__likes">Нравится: 150</span>
-            </blockquote>
+              </div>
+              <div class="comment__content">
+                <p>
+                  Где снег-то?
+                </p>
+              </div>
+              <div class="comment__likes">
+                <span>Нравится: 150</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__image" href="photo-page.html">
               <img src="img/photo.jpg" alt="" width="280" height="180">
             </a>
-            <blockquote class="comment">
-              <span class="comment__autor">
-                <b class="comment__autor-name">Надежда</b>
+            <div class="comment">
+              <div class="comment__author">
+                <b class="comment__author-name">Надежда</b>
                 <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(45 часов назад)</time>
-              </span>
-              <p>
-                Всем GM и взаимные лайки!
-              </p>
-              <span class="comment__likes">Нравится: 2560</span>
-            </blockquote>
+              </div>
+              <div class="comment__content">
+                <p>
+                  Всем GM и взаимные лайки!
+                </p>
+              </div>
+              <div class="comment__likes">
+                <span>Нравится: 2560</span>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
@@ -147,7 +175,7 @@
         <p>
           Затмите их всех!<br/>Выкладывайте все, что накопилось в телефоне!
         </p>
-        <form class="upload-block__form" action="js/something.js" method="post">
+        <form class="upload-block__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="upload-block__promo"></div>
           <div class="upload-block__filters filters">
             <div class="filters__label">
@@ -167,24 +195,22 @@
       </section>
     </main>
     <footer class="main-footer">
-      <a class="main-footer__item logotype">
-        <img class="logotype__image" src="img/logo.svg" alt="" width="60" height="40">
-        <span class="logotype__name">Pink</span>
+      <a class="main-footer__item logo" href="index.html">
+        <img class="logo__image" src="img/logo.svg" alt="" width="60" height="40">
+        Pink
       </a>
       <div class="main-footer__item social">
         <ul class="social__list">
-          <li class="social__item social__item--twitter"><a href="https://twitter.com">Мы в Twitter</a></li>
-          <li class="social__item social__item--fb"><a href="https://facebook.com">Мы на Facebook</a></li>
-          <li class="social__item social__item--youtube"><a href="https://youtube.com">Мы на Youtube</a></li>
+          <li><a class="social__item social__item--twitter" href="https://twitter.com">Мы в Twitter</a></li>
+          <li><a class="social__item social__item--twitter" href="https://facebook.com">Мы на Facebook</a></li>
+          <li><a class="social__item social__item--twitter" href="https://youtube.com">Мы на Youtube</a></li>
         </ul>
       </div>
       <div class="main-footer__item copyright">
-        <span>
-          Раработано
-          <a class="copyright__link" href="https://htmlacademy.ru">
-            <img src="img/htmlacademy.svg" alt="htmlacademy" width="25" height="30">
-          </a>
-        </span>
+        <span>Раработано</span>
+        <a class="copyright__link" href="https://htmlacademy.ru">
+          <img src="img/htmlacademy.svg" alt="htmlacademy" width="25" height="30">
+        </a>
       </div>
     </footer>
   </body>

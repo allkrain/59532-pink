@@ -7,22 +7,22 @@
   <body>
     <header class="main-header">
       <nav class="main-menu">
+        <div class="main-menu__item">
+          <a class="logo">Pink</a>
+          <button class="main-menu__btn" type="button">Меню</button>
+        </div>
         <ul class="main-menu__list">
-          <li class="main-menu__item main-menu__navigation">
-            <a>Pink</a>
-            <button class="main-menu__btn" type="button">Меню</button>
+          <li>
+            <a class="main-menu__item main-menu__item--active">Главная</a>
           </li>
-          <li class="main-menu__item main-menu__item--active">
-            <a>Главная</a>
+          <li>
+            <a class="main-menu__item" href="photo.html">Фотографии</a>
           </li>
-          <li class="main-menu__item">
-            <a href="photo.html">Фотографии</a>
+          <li>
+            <a class="main-menu__item" href="contest.html">Конкурс</a>
           </li>
-          <li class="main-menu__item">
-            <a href="contest.html">Конкурс</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="https://htmlacademy.ru">HTML Academy</a>
+          <li>
+            <a class="main-menu__item" href="https://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -33,14 +33,14 @@
         <h2 class="visually-hidden">Загрузите "Pink"</h2>
         <a class="btn btn--download" href="download-page.html">Скачать приложение</a>
         <ul class="download-links">
-          <li class="download-links__item dowload-links__item--apple">
-            <a href="https://itunes.apple.com">для Apple</a>
+          <li>
+            <a class="download-links__item dowload-links__item--apple" href="https://itunes.apple.com">для Apple</a>
           </li>
-          <li class="download-links__item download-links__item--android">
-            <a href="https://play.google.com/store">для Android</a>
+          <li>
+            <a class="download-links__item download-links__item--android" href="https://play.google.com/store">для Android</a>
           </li>
-          <li class="download-links__item download-links__item--windows">
-            <a href="https://windowsphone.com/store">для Windows</a>
+          <li>
+            <a class="download-links__item download-links__item--windows" href="https://windowsphone.com/store">для Windows</a>
           </li>
         </ul>
         <p>
@@ -75,7 +75,7 @@
             <input class="slider__input" id="review-input-3" name="review" type="radio" value="3">
           </div>
           <blockquote class="review__item">
-            <b class="review__autor-name">Николай Петров</b>
+            <cite class="review__author-name">Николай Петров</cite>
             <p class="review__content">
               &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
             </p>
@@ -171,17 +171,17 @@
             Остались вопросы?<br/>
             Свяжитесь с нами!
           </p>
-          <p class="contacts__telephone">
+          <p class="contacts__item">
             <b>Звоните:</b>
-            <a class="contacts__item" href="tel:78125556666">+7 (812) 555-66-66</a>
+            <a class="contacts__link" href="tel:78125556666">+7 (812) 555-66-66</a>
           </p>
-          <p class="contacts__email">
+          <p class="contacts__item">
             <b>Пишите:</b>
-            <a class="contacts__item" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
-          <p class="contacts__adress">
+          <p class="contacts__item">
             <b>Приезжайте в гости:</b>
-            <span  class="contacts__item">ул. Большая Конюшенная, 19/8</span>
+            <span  class="contacts__link">ул. Большая Конюшенная, 19/8</span>
           </p>
         </div>
         <div class="contacts__map"></div>
