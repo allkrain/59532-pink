@@ -1,0 +1,29 @@
+.main-menu {
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include font(18px, 32px, bold);
+
+    display: block;
+    padding: 10px 0;
+    color: $white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $menuopen-bg-color;
+    box-shadow:
+      inset 0 0 1px 0 rgba($white, 0.15),
+      0 0 1px 0 $black;
+  }
+
+  &__btn {
+    border: none;
+    color: inherit;
+    background-color: $white;
+  }
+}

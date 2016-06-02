@@ -1,0 +1,38 @@
+.contacts {
+  @include font();
+
+  color: $gray-font-color;
+  text-align: center;
+  background-color: $white;
+
+  &__slogan {
+    @include font(24px, auto, 300);
+
+    color: $gray-font-color;
+  }
+
+  &__item {
+    margin: 20px 0;
+
+    b {
+      @include font(18px, 24px, bold);
+
+      display: block;
+      color: $gray-font-color;
+    }
+  }
+
+  &__link {
+    @include font(24px, 30px, 300);
+
+    color: $pink;
+    text-decoration: none;
+  }
+
+  &__map {
+    height: 200px;
+    background-image: url('/img/bg-map-mobile@1x.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}

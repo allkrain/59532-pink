@@ -1,0 +1,23 @@
+.btn {
+  @include font(18px, 18px, bold);
+
+  display: block;
+  padding: 15px 20px;
+  color: $pink;
+  text-decoration: none;
+  text-align: center;
+  border: 3px solid $pink;
+  border-radius: 28px;
+  background-color: transparent;
+
+  &--download {
+    display: inline-block;
+    color: $white;
+    border-color: $white;
+  }
+
+  &--disabled {
+    color: rgba($gray-font-color, 0.1);
+    border-color: rgba($gray-font-color, 0.1);
+  }
+}

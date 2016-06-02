@@ -1,0 +1,22 @@
+.review {
+  background-color: $white;
+
+  &__item {
+    @include font(14px, 30px);
+
+    text-align: center;
+  }
+
+  &__author-name {
+    @include font(18px, 30px, bold);
+
+    font-style: normal;
+    color: $black;
+  }
+
+  &__content {
+    @include font(14px, 30px);
+
+    color: $gray-font-color;
+  }
+}

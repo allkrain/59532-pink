@@ -1,0 +1,10 @@
+.upload-block {
+  @include font(14px, 30px);
+
+  color: $gray-font-color;
+  text-align: center;
+
+  &__form {
+    background-color: $stripe-bg-color;
+  }
+}
