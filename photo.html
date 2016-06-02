@@ -38,26 +38,26 @@
         <p>
           Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
         </p>
-        <ul class="gallery__list">
-          <li class="gallery__item gallery__item--panorama">
-            <a class="gallery__image" href="photo-page.html">
-              <img src="img/panorama-mobile@1x.jpg" alt="" width="320" height="137">
-            </a>
-            <div class="comment">
-              <div class="comment__author">
-                <b class="comment__author-name">Анна</b>
-                <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(5 минут назад)</time>
-              </div>
-              <div class="comment__content">
-                <p>
-                  Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
-                </p>
-              </div>
-              <div class="comment__likes">
-                <span>Нравится: 215</span>
-              </div>
+        <div class="gallery__item gallery__item--panorama">
+          <a class="gallery__image gallery__image--panorama" href="photo-page.html">
+            <img src="img/panorama-mobile@1x.jpg" alt="" width="320" height="137">
+          </a>
+          <div class="comment">
+            <div class="comment__author">
+              <b class="comment__author-name">Анна</b>
+              <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(5 минут назад)</time>
             </div>
-          </li>
+            <div class="comment__content">
+              <p>
+                Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
+              </p>
+            </div>
+            <div class="comment__likes">
+              <span>Нравится: 215</span>
+            </div>
+          </div>
+        </div>
+        <ul class="gallery__list">
           <li class="gallery__item">
             <a class="gallery__image" href="photo-page.html">
               <img src="img/photo-1-mobile@1x.jpg" alt="" width="280" height="180">
@@ -185,7 +185,7 @@
           </div>
           <div class="upload-block__filters filters">
             <div class="filters__label">
-              <label class="filters__label-item filters__label-item--crop" for="crop-tool">Обрезать</label>
+              <label class="filters__label-item filters__label-item--active filters__label-item--crop" for="crop-tool">Обрезать</label>
               <label class="filters__label-item filters__label-item--fill" for="fill-tool">Заливка</label>
               <label class="filters__label-item filters__label-item--contrast" for="contrast-tool">Контрастность</label>
             </div>
@@ -213,7 +213,7 @@
         </ul>
       </div>
       <div class="main-footer__item copyright">
-        <span>Раработано</span>
+        <span>Разработано</span>
         <a class="copyright__link" href="https://htmlacademy.ru">
           <img src="img/htmlacademy.svg" alt="htmlacademy" width="25" height="30">
         </a>

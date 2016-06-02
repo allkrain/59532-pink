@@ -1,0 +1,33 @@
+.social {
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include font(0);
+
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid rgba($gray-font-color, 0.1);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &--twitter {
+      background-image: url(../../img/icon-twitter.svg);
+    }
+
+    &--fb {
+      background-image: url(../../img/icon-facebook.svg);
+    }
+
+    &--youtube {
+      background-image: url(../../img/icon-youtube.svg);
+    }
+  }
+
+}

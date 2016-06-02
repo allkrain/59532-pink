@@ -13,4 +13,13 @@
   &__item {
     text-align: center;
   }
+
+  &__image {
+
+    &--panorama {
+      background-image: url('../img/panorama-mobile@1x.jpg');
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+    }
+  }
 }

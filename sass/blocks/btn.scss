@@ -1,7 +1,7 @@
 .btn {
   @include font(18px, 18px, bold);
 
-  display: inline-block;
+  display: block;
   padding: 15px 20px;
   color: $pink;
   text-decoration: none;
@@ -11,6 +11,7 @@
   background-color: transparent;
 
   &--download {
+    display: inline-block;
     color: $white;
     border-color: $white;
   }
