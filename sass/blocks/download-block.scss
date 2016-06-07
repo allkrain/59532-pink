@@ -1,10 +1,67 @@
 .download-block {
-  background: $download-bg-color;
+
+  padding: 28px 0;
+  min-width: 320px;
+  background-color: $download-bg-color;
   text-align: center;
 
-  p {
-    @include font(14px, 24px, 300);
+  h2 {
+    display: none;
+  }
 
-    color: $white;
+  p {
+    @include font($fweight: 300, $fcolor: $white);
+
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  &__wrapper {
+    @include centering();
+  }
+}
+
+@media (min-width: 700px) {
+  .download-block {
+    position: relative;
+    margin-top: -619px;
+    padding: 85px 0;
+    background-color: transparent;
+    z-index: 10px;
+
+    &__wrapper {
+      width: 300px;
+      margin-left: 6%;
+    }
+
+    h2 {
+      @include font(40px, auto, 300, $white);
+
+      display: block;
+      margin-top: 0;
+      margin-bottom: 40px;
+      padding: 0 50px;
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .download-block {
+    padding: 118px 0;
+    margin-top: -745px;
+
+    &__wrapper {
+      margin-left: 11%;
+    }
+
+    h2 {
+      margin-bottom: 60px;
+    }
   }
 }

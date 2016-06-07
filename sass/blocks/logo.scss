@@ -1,4 +1,21 @@
 .logo {
-  padding: 20px 0;
+  display: inline-block;
+  padding: 22px 0;
+  padding-bottom: 25px;
   font-size: 0;
+  line-height: 0;
+}
+
+.logo__image {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 700px) {
+  .logo {
+    padding: {
+      top: 44px;
+      bottom: 42px
+    }
+  }
 }

@@ -1,10 +1,18 @@
 .upload-block {
   @include font(14px, 30px);
 
-  color: $gray-font-color;
   text-align: center;
+}
 
-  &__form {
-    background-color: $stripe-bg-color;
-  }
+.upload-block__form {
+  background-color: $stripe-bg-color;
+}
+
+
+@media (min-width: 700px) {
+
+}
+
+@media (min-width: 1200px) {
+
 }

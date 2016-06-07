@@ -1,22 +1,66 @@
 .main-header {
-  margin: 0 auto;
-  background-color: $menuopen-bg-color;
-  background-image:
-    url('../img/bg-back-mobile@1x.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 0;
+  box-sizing: border-box;
+  position: relative;
+  min-width: 320px;
+  background: {
+    color: $menuopen-bg-color;
+    image: url('../../img/bg-back-mobile@1x.jpg');
+    repeat: no-repeat;
+    position: 50% 100%;
+  }
 
-  &--main-page {
-    background-image:
-      url('../img/iphone-hand-mobile@1x.png'),
-      url('../img/bg-back-mobile@1x.jpg');
+  &__main-page {
+    min-height: 462px;
+    padding-bottom: 462px;
+    background: {
+      image:
+        url('../../img/iphone-hand-mobile@1x.png'),
+        url('../../img/bg-back-mobile@1x.jpg');
+      repeat: no-repeat;
+      position: 0 100%, 50% 100%;
+    }
   }
 
   h1 {
-    @include font(24px, auto, 300);
+    @include font(24px, auto, 300, $white);
+    @include centering();
 
-    font-style: normal;
-    color: $white;
+    margin: {
+      top: 35px;
+      bottom: 54px;
+    }
     text-align: center;
+  }
+}
+
+@media (min-width: 700px) {
+  .main-header {
+    padding-bottom: 438px;
+
+    &__main-page {
+      min-height: 728px;
+      background: {
+        size: auto 544px, auto 765px;
+        position: 70% 100%, 50% 100%;
+      }
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-header {
+    min-height: 394px;
+
+    &__main-page {
+      min-height: 852px;
+      background: {
+        size: auto 645px, auto 1386px;
+        position: 60% 100%, 50% 50%;
+      }
+    }
   }
 }

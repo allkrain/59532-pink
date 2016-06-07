@@ -1,38 +1,120 @@
 .contacts {
   @include font();
 
-  color: $gray-font-color;
+  min-width: 320px;
   text-align: center;
   background-color: $white;
+}
 
-  &__slogan {
-    @include font(24px, auto, 300);
+.contacts__information {
+  @include centering();
 
-    color: $gray-font-color;
+  padding-top: 46px;
+  padding-bottom: 40px;
+}
+
+.contacts__slogan {
+  @include font(24px, normal, 300);
+
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.contacts__item {
+  margin: 0;
+  margin-bottom: 26px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__item b {
+  @include font(18px, 24px, bold);
+
+  display: block;
+}
+
+.contacts__link {
+  @include font(24px, 30px, 300, $pink);
+
+  text-decoration: none;
+}
+
+.contacts__map {
+  height: 200px;
+  background-image:
+    url('../../img/icon-map-marker.svg'),
+    url('../../img/bg-map-mobile@1x.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%, 50% 100%;
+}
+
+@media (min-width: 700px) {
+  .contacts__information {
+    padding-top: 56px;
+    padding-bottom: 26px;
   }
 
-  &__item {
-    margin: 20px 0;
+  .contacts__slogan {
+    font-size: 40px;
+    margin-bottom: 56px;
+  }
 
-    b {
-      @include font(18px, 24px, bold);
+  .contacts__item {
+    display: inline-block;
+    padding: 0 40px;
+    margin-bottom: 50px;
+    vertical-align: top;
+  }
 
-      display: block;
-      color: $gray-font-color;
+  .contacts__item b {
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  .contacts__link {
+    line-height: normal;
+  }
+
+  .contacts__map {
+    height: 378px;
+    background-position: 50% 50%, 50% 100%;
+    background-size: auto, cover;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts__information {
+    padding-top: 76px;
+    padding-bottom: 22px;
+  }
+
+  .contacts__slogan {
+    font-size: 50px;
+    margin-bottom: 70px;
+  }
+
+  .contacts__item {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 40px;
+    padding: 0 20px;
+    width: 25%;
+    vertical-align: top;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
-  &__link {
-    @include font(24px, 30px, 300);
-
-    color: $pink;
-    text-decoration: none;
+  .contacts__item b {
+    font-size: 18px;
   }
 
-  &__map {
-    height: 200px;
-    background-image: url('/img/bg-map-mobile@1x.png');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+  .contacts__map {
+    height: 500px;
+    background-position: 50% 50%, 50% 100%;
+    background-size: auto, cover;
   }
 }
