@@ -93,18 +93,28 @@
   .contacts__slogan {
     font-size: 50px;
     margin-bottom: 70px;
+    clear: both;
   }
 
   .contacts__item {
     display: inline-block;
     margin-bottom: 0;
-    margin-right: 40px;
-    padding: 0 20px;
+    padding: 0 40px;
     width: 25%;
     vertical-align: top;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &--telephone {
+      float: left;
+      padding-left: 0;
+    }
+
+    &--email {
+      float: right;
+      padding-right: 0;
     }
   }
 

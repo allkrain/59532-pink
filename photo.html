@@ -10,7 +10,7 @@
     <header class="main-header">
       <nav class="main-menu">
         <div class="main-menu__wrapper">
-          <div class="main-menu__item">
+          <div class="main-menu__item main-menu__item--header">
             <div class="main-menu__wrapper-header">
               <a class="logo" href="index.html">
                 <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="" width="75" height="23">
@@ -40,14 +40,14 @@
     <main>
       <section class="gallery">
         <h2 class="visually-hidden">Галлерея</h2>
-        <p>
-          Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+        <p class="gallery__slogan">
+          Взгляните на фотографии, которые выкладывают пользователи!  Видите, как не хватает ваших?
         </p>
         <div class="gallery__item gallery__item--panorama">
           <a class="gallery__image gallery__image--panorama" href="photo-page.html">
             <img src="img/panorama-mobile@1x.jpg" alt="" width="320" height="137">
           </a>
-          <div class="comment">
+          <div class="comment comment--panorama">
             <div class="comment__author">
               <b class="comment__author-name">Анна</b>
               <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(5 минут назад)</time>
@@ -181,27 +181,31 @@
       </section>
       <section class="upload-block">
         <h2 class="visually-hidden">Разместите свои фотографии</h2>
-        <p>
+        <p class="upload-block__slogan">
           Затмите их всех!<br/>Выкладывайте все, что накопилось в телефоне!
         </p>
         <form class="upload-block__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="upload-block__promo">
-            <img src="img/photo-7-mobile@1x.jpg" alt="" class="upload-block__promo-image" width="280" height="374">
-          </div>
-          <div class="upload-block__filters filters">
-            <div class="filters__label">
-              <label class="filters__label-item filters__label-item--active filters__label-item--crop" for="crop-tool">Обрезать</label>
-              <label class="filters__label-item filters__label-item--fill" for="fill-tool">Заливка</label>
-              <label class="filters__label-item filters__label-item--contrast" for="contrast-tool">Контрастность</label>
+          <div class="upload-block__wrapper">
+            <div class="upload-block__promo">
+              <img src="img/photo-7-mobile@1x.jpg" alt="" class="upload-block__promo-image" width="280" height="374">
             </div>
-            <div class="filters__range">
-              <input class="filters__range-item filters__range-item--crop" id="crop-tool" type="range" name="crop-tool" min="0" max="100">
-              <input class="filters__range-item filters__range-item--fill filters__range-item--hidden" id="fill-tool" type="range" name="fill-tool" min="0" max="100">
-              <input class="filters__range-item filters__range-item--contrast filters__range-item--hidden" id="contrast-tool" type="range" name="contrast-tool" min="0" max="100">
+            <div class="upload-block__filters filters">
+              <div class="filters__label">
+                <label class="filters__label-item filters__label-item--active filters__label-item--crop" for="crop-tool">Обрезать</label>
+                <label class="filters__label-item filters__label-item--fill" for="fill-tool">Заливка</label>
+                <label class="filters__label-item filters__label-item--contrast" for="contrast-tool">Контрастность</label>
+              </div>
+              <div class="filters__range">
+                <input class="filters__range-item filters__range-item--crop" id="crop-tool" type="range" name="crop-tool" min="0" max="100">
+                <input class="filters__range-item filters__range-item--fill filters__range-item--hidden" id="fill-tool" type="range" name="fill-tool" min="0" max="100">
+                <input class="filters__range-item filters__range-item--contrast filters__range-item--hidden" id="contrast-tool" type="range" name="contrast-tool" min="0" max="100">
+              </div>
+            </div>
+            <div class="upload-block__btns">
+              <button class="btn btn--upload" type="submit">Запостить</button>
+              <button class="btn btn--chancel" type="reset">Отмена</button>
             </div>
           </div>
-          <input class="btn" type="submit" name="post-btn" value="Запостить">
-          <input class="btn btn--disabled" type="reset" name="reset-btn" value="Отмена">
         </form>
       </section>
     </main>

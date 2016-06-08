@@ -1,18 +1,89 @@
 .upload-block {
   @include font(14px, 30px);
 
+  min-width: 320px;
   text-align: center;
+}
+
+.upload-block__slogan {
+  @include centering();
+
+  padding: 0 10px;
+  padding-top: 22px;
+  padding-bottom: 40px;
 }
 
 .upload-block__form {
   background-color: $stripe-bg-color;
 }
 
+.upload-block__promo {
+  padding-top: 20px;
+  padding-bottom: 42px;
+  line-height: 0;
+}
+
+.upload-block__promo img {
+  width: 280px;
+  height: 375px;
+}
+
+.upload-block__btns {
+  padding-top: 37px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 699px) {
+  .upload-block__promo,
+  .upload-block__btns
+  {
+    @include centering();
+  }
+}
+
 
 @media (min-width: 700px) {
+  .upload-block__form {
+    padding-top: 58px;
+    padding-bottom: 52px;
+  }
 
+  .upload-block__wrapper {
+    @include centering();
+    @include clearfix();
+
+    box-sizing: border-box;
+  }
+
+  .upload-block__promo {
+    float: left;
+    padding: 0;
+  }
+
+  .upload-block__promo img {
+    width: 300px;
+    height: 400px;
+  }
+
+  .upload-block__filters,
+  .upload-block__btns
+  {
+    width: 274px;
+    float: right;
+    clear: right;
+  }
 }
 
 @media (min-width: 1200px) {
+  .upload-block__wrapper {
+    padding-left: 80px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+  }
 
+  .upload-block__filters,
+  .upload-block__btns
+  {
+    width: 410px;
+  }
 }

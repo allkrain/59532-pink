@@ -3,49 +3,74 @@
   padding: 20px 18px;
   background-color: $stripe-bg-color;
 
-  &__author {
-    text-align: left;
-  }
-
-  &__author-name {
-    @include font(14px, 24px, bold);
-
-    color: $gray-font-color;
-  }
-
-  &__publication-time {
-    @include font(12px, 24px, 300);
-
-    color: $gray-font-color;
-    text-transform: uppercase;
-  }
-
-  &__content {
-    @include font();
-
-    color: $gray-font-color;
-    text-align: left;
-
-    p {
-      margin: 0;
-      margin-bottom: 18px;
-    }
-  }
-
-  &__likes {
-    @include font();
-
-    padding-left: 30px;
-    color: $pink;
-    text-transform: uppercase;
-    text-align: left;
-    background-image: url(../../img/icon-heart.svg);
-    background-repeat: no-repeat;
-    background-position: 0 50%;
+  &--panorama {
+    @include centering();
+    box-sizing: border-box;
   }
 }
 
+.comment__author {
+  text-align: left;
+}
+
+.comment__author-name {
+  @include font(14px, 24px, bold);
+
+  color: $gray-font-color;
+}
+
+.comment__publication-time {
+  @include font(12px, 24px, 300);
+
+  color: $gray-font-color;
+  text-transform: uppercase;
+}
+
+.comment__content {
+  @include font();
+
+  color: $gray-font-color;
+  text-align: left;
+}
+
+.comment__content p {
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.comment__likes {
+  @include font($fsize: 12px, $fcolor: $pink);
+
+  padding-left: 30px;
+  text-transform: uppercase;
+  text-align: left;
+  background-image: url(../../img/icon-heart.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
 @media (min-width: 700px) {
+  .comment {
+    padding: 30px 28px;
+  }
+
+  .comment--panorama {
+    position: relative;
+  }
+
+  .comment__likes {
+    padding-left: 0;
+    background-position: 100% 50%;
+  }
+
+  .comment--panorama .comment__likes {
+    position: absolute;
+    top: 30px;
+    right: 28px;
+    padding-right: 30px;
+    background-position: 100% 50%;
+  }
+
 
 }
 

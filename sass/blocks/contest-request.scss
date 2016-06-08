@@ -1,65 +1,55 @@
 .contest-request {
-  @include font(14px, 30px);
+  @include font($lheight: 30px);
+}
+.contest-request__title {
+  @include font($lheight: 18px, $fcolor: $pink);
 
-  color: $gray-font-color;
+  text-transform: uppercase;
+}
 
-  &__title {
-    @include font(14px, 18px);
+.contest-request__label {
+  @include font(18px, 30px);
 
-    color: $pink;
+  &--text {
+    @include font($lheight: 30px, $fcolor: $pink);
+
     text-transform: uppercase;
-  }
-
-  &__label {
-    @include font(18px, 30px);
-
-    color: $gray-font-color;
-
-    &--text {
-      @include font(14px, 30px);
-
-      color: $pink;
-      text-transform: uppercase;
-    }
-  }
-
-  &__text-field {
-    @include font(18px, 30px);
-
-    padding: 17px 20px;
-    color: $gray-font-color;
-    border: 2px solid $table-border-color;
-  }
-
-  &__travel-action {
-    background-color: $stripe-bg-color;
-  }
-
-  &__pink-version {
-    background-color: $stripe-bg-color;
-  }
-
-  &__note {
-    @include font(14px, 30px);
-
-    color: $gray-font-color;
-  }
-
-  &__star {
-    color: $pink;
-  }
-
-  &__btn {
-    @include font(18px, 30px, bold);
-
-    padding: 18px 20px;
-    color: $white;
-    text-transform: uppercase;
-    text-align: center;
-    border: none;
-    background-color: $green-btn-bg-color;
   }
 }
+
+.contest-request__text-field {
+  @include font(18px, 30px);
+
+  padding: 17px 20px;
+  border: 2px solid $table-border-color;
+}
+
+.contest-request__travel-action {
+  background-color: $stripe-bg-color;
+}
+
+.contest-request__pink-version {
+  background-color: $stripe-bg-color;
+}
+
+.contest-request__note {
+  @include font($lheight: 30px);
+}
+
+.contest-request__star {
+  color: $pink;
+}
+
+.contest-request__btn {
+  @include font(18px, 30px, bold, $white);
+
+  padding: 18px 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  background-color: $green-btn-bg-color;
+}
+
 
 @media (min-width: 700px) {
 

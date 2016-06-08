@@ -1,9 +1,8 @@
 .btn {
-  @include font(18px, 18px, bold);
+  @include font(18px, 18px, bold, $pink);
 
   display: block;
   padding: 15px 20px;
-  color: $pink;
   text-decoration: none;
   text-align: center;
   border: 3px solid $pink;
@@ -15,7 +14,13 @@
     border-color: $white;
   }
 
-  &--disabled {
+  &--upload {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  &--chancel {
+    width: 100%;
     color: rgba($gray-font-color, 0.1);
     border-color: rgba($gray-font-color, 0.1);
   }
@@ -30,6 +35,18 @@
 
     &--download {
       font-size: 21px;
+    }
+
+    &--upload,
+    &--chancel
+    {
+      width: 180px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    &--upload {
+      margin-right: 42px;
     }
   }
 }

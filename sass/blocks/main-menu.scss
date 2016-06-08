@@ -1,181 +1,177 @@
 .main-menu {
   position: relative;
   box-sizing: border-box;
+}
 
-  &__wrapper-header {
-    @include centering();
-  }
+.main-menu__wrapper-header {
+  @include centering();
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.main-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-    &--open {
-      display: block;
-    }
-
-    &--close {
-      display: none;
-    }
-  }
-
-  &__item {
-    @include font(18px, 32px, bold, $white);
-
+  &--open {
     display: block;
-    padding: 10px 0;
-    text: {
-      align: center;
-      decoration: none;
-      transform: uppercase;
-    }
-    background-color: $menuopen-bg-color;
-    box-shadow:
-      inset 0 0 1px 0 rgba($white, 0.15),
-      0 0 1px 0 $black;
-
-    &--header {
-      padding: 0;
-      text-align: left;
-    }
-
-    &--close {
-      background-color: rgba($black, 0.3);
-    }
-
   }
 
-  &__btn {
-    @include font($fsize: 0, $fcolor: inherit);
-
-    float: right;
-    position: relative;
-    margin: 11% 0;
-    width: 50px;
-    height: 4px;
-    border: none;
-    background-color: transparent;
-
-    &--open {
-
-      &::before,
-      &::after
-      {
-        content: '';
-        position: absolute;
-        top: calc(50% - 2px);
-        right: 0;
-        display: block;
-        width: 31px;
-        height: 4px;
-        background-color: $white;
-        transform: rotate(45deg);
-      }
-
-      &::after {
-        transform: rotate(-45deg);
-      }
-    }
-
-    &--close {
-      position: relative;
-      background-color: $white;
-
-      &::before,
-      &::after
-      {
-        content: '';
-        position: absolute;
-        right: 0;
-        display: block;
-        width: 50px;
-        height: 4px;
-        background-color: $white;
-      }
-
-      &::before {
-        top: -8px;
-      }
-
-      &::after {
-        bottom: -8px;
-      }
-    }
-
+  &--close {
+    display: none;
   }
 }
 
-@media (min-width: 700px) {
-  .main-menu {
+.main-menu__item {
+  @include font(18px, 32px, bold, $white);
 
-    &__list {
+  display: block;
+  padding: 10px 0;
+  text: {
+    align: center;
+    decoration: none;
+    transform: uppercase;
+  }
+  background-color: $menuopen-bg-color;
+  box-shadow:
+    inset 0 0 1px 0 rgba($white, 0.15),
+    0 0 1px 0 $black;
+
+  &--header {
+    padding: 0;
+    text-align: left;
+  }
+
+  &--close {
+    background-color: rgba($black, 0.3);
+  }
+
+}
+
+.main-menu__btn {
+  @include font($fsize: 0, $fcolor: inherit);
+
+  float: right;
+  position: relative;
+  margin: 11% 0;
+  width: 50px;
+  height: 4px;
+  border: none;
+  background-color: transparent;
+
+  &--open {
+
+    &::before,
+    &::after
+    {
+      content: '';
       position: absolute;
-      top: 109px;
-      left: 0;
+      top: calc(50% - 2px);
       right: 0;
-      z-index: 15;
+      display: block;
+      width: 31px;
+      height: 4px;
+      background-color: $white;
+      transform: rotate(45deg);
     }
 
-    &__item {
-      padding: 18px 0;
-
-      &--header {
-        padding: 0;
-      }
-    }
-
-    &__btn {
-      margin: 8% 0;
+    &::after {
+      transform: rotate(-45deg);
     }
   }
+
+  &--close {
+    position: relative;
+    background-color: $white;
+
+    &::before,
+    &::after
+    {
+      content: '';
+      position: absolute;
+      right: 0;
+      display: block;
+      width: 50px;
+      height: 4px;
+      background-color: $white;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+
+}
+
+@media (min-width: 700px) {
+.main-menu__list {
+  position: absolute;
+  top: 109px;
+  left: 0;
+  right: 0;
+  z-index: 15;
+}
+
+.main-menu__item {
+  padding: 18px 0;
+
+  &--header {
+    padding: 0;
+  }
+}
+
+.main-menu__btn {
+  margin: 8% 0;
+}
 }
 
 @media (min-width: 1200px) {
   .main-menu {
-
-    &__wrapper {
-      @include centering();
-    }
-
-    &__wrapper-header {
-      width: auto;
-    }
-
     background-color: rgba($black, 0.3);
+  }
 
-    &__list {
-      position: static;
-      display: inline-block;
+  .main-menu__wrapper {
+    @include centering();
+  }
 
-      li{
-        display: inline-block;
+  .main-menu__wrapper-header {
+    width: auto;
+  }
+
+  .main-menu__list {
+    position: static;
+    display: inline-block;
+  }
+
+  .main-menu__list li{
+    display: inline-block;
+  }
+
+  .main-menu__item {
+    display: inline-block;
+    margin: 0 41px;
+    font-weight: normal;
+    line-height: 18px;
+    text-transform: none;
+    background-color: transparent;
+    box-shadow: none;
+
+    &--header {
+      margin: {
+        left: 0;
+        right: 130px;
       }
     }
 
-    &__item {
-      display: inline-block;
-      margin: 0 41px;
-      font-weight: normal;
-      line-height: 18px;
-      text-transform: none;
-      background-color: transparent;
-      box-shadow: none;
-
-      &--header {
-        margin: {
-          left: 0;
-          right: 130px;
-        }
-      }
-
-      &::last-child {
-        margin-right: 0;
-      }
+    &::last-child {
+      margin-right: 0;
     }
+  }
 
-    &__btn {
-      display: none;
-    }
+  .main-menu__btn {
+    display: none;
   }
 }
