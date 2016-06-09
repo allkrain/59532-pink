@@ -4,7 +4,7 @@
   min-width: 320px;
   background: {
     color: $menuopen-bg-color;
-    image: url('../../img/bg-back-mobile@1x.jpg');
+    image: url('../img/bg-back-mobile@1x.jpg');
     repeat: no-repeat;
     position: 50% 100%;
   }
@@ -15,8 +15,8 @@
   padding-bottom: 462px;
   background: {
     image:
-      url('../../img/iphone-hand-mobile@1x.png'),
-      url('../../img/bg-back-mobile@1x.jpg');
+      url('../img/iphone-hand-mobile@1x.png'),
+      url('../img/bg-back-mobile@1x.jpg');
     repeat: no-repeat;
     position: 0 100%, 50% 100%;
   }

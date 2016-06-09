@@ -338,6 +338,7 @@ input[class*="radio"]:checked + label[class*="radio"]::after {
 
 @media (min-width: 1200px) {
   .contest-request {
+    @include centering();
     flex-direction: row;
     justify-content: center;
     align-content: stretch;

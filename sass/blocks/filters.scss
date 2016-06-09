@@ -13,16 +13,16 @@
   background-position: 50% 50%;
 
   &--crop {
-    background-image: url('../../img/icon-editor-crop.svg');
+    background-image: url('../img/icon-editor-crop.svg');
   }
 
   &--fill {
-    background-image: url('../../img/icon-editor-fill.svg');
+    background-image: url('../img/icon-editor-fill.svg');
   }
 
   &--contrast {
     margin-right: 0;
-    background-image: url('../../img/icon-editor-contrast.svg');
+    background-image: url('../img/icon-editor-contrast.svg');
   }
 }
 
