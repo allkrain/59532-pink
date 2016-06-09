@@ -39,8 +39,8 @@
     </header>
     <main>
       <form class="contest-request" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <p class="contest-request__slogan">
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <br/>Пожалуйста заполните форму ниже:
         </p>
         <div class="contest-request__fullname">
           <label class="contest-request__label contest-request__label--text" for="lastname">Фамилия:</label>
@@ -50,47 +50,57 @@
           <label class="contest-request__label contest-request__label--text" for="middlename">Отчество:</label>
           <input class="contest-request__text-field" id="middlename" type="text" name="middlename" placeholder="Ну и отчество тоже">
         </div>
-        <fieldset class="contest-request__travel-action">
-          <legend class="contest-request__title">
-            Ваши безбашенные достижения в путешествии
-          </legend>
-          <input class="contest-request__checkbox" id="action-1" type="checkbox" name="travel-actions" value="1" checked>
-          <label class="contest-request__label contest-request__label--checkbox" for="action-1">Сделал селфи с акулой</label>
-          <input class="contest-request__checkbox" id="action-2" type="checkbox" name="travel-actions" value="2" checked>
-          <label class="contest-request__label contest-request__label--checkbox" for="action-2">Обгорел на пляже</label>
-          <input class="contest-request__checkbox" id="action-3" type="checkbox" name="travel-actions" value="3">
-          <label class="contest-request__label contest-request__label--checkbox" for="action-3">Видел Чака Норриса</label>
-          <input class="contest-request__checkbox" id="action-4" type="checkbox" name="travel-actions" value="4">
-          <label class="contest-request__label contest-request__label--checkbox" for="action-4">Накупил сувениров</label>
-          <input class="contest-request__checkbox" id="action-5" type="checkbox" name="travel-actions" value="5" checked>
-          <label class="contest-request__label contest-request__label--checkbox" for="action-5">Удержал башню</label>
-          <input class="contest-request__checkbox" id="action-6" type="checkbox" name="travel-actions" value="6">
-          <label class="contest-request__label contest-request__label--checkbox" for="action-6">Разгромил отель</label>
-        </fieldset>
-        <fieldset class="contes-request__contacts">
-          <legend class="contest-request__title">Контактные данные</legend>
-          <label class="contest-request__label contest-request__label--text" for="telephone">Номерок телефончика</label>
-          <input class="contest-request__text-field" id="telephone" type="tel" name="telephone" placeholder="Номер, пожалуйста">
-          <label class="contest-request__label contest-request__label--text" for="email">Адресок почты</label>
-          <input class="contest-request__text-field" id="email" type="email" name="email" placeholder="E-mail, пожалуйста">
-        </fieldset>
-        <fieldset class="contest-request__pink-version">
-          <legend class="contest-request__title">
-            С каким приложением путешествовали
-          </legend>
-          <input class="contest-request__radio" id="app-1" type="radio" name="application-version" value="1" checked>
-          <label class="contest-request__label contest-request__label--radio" for="app-1">Pink для iOS</label>
-          <input class="contest-request__radio" id="app-2" type="radio" name="application-version" value="2">
-          <label class="contest-request__label contest-request__label--radio" for="app-2">Pink на Android</label>
-          <input class="contest-request__radio" id="app-3" type="radio" name="application-version" value="3">
-          <label class="contest-request__label contest-request__label--radio" for="app-3">Windows Phone</label>
-        </fieldset>
-        <fieldset class="contest-request__story">
-          <legend class="contest-request__title">Опишите свои эмоции</legend>
-          <textarea class="contest-request__text-field" id="story" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="6"></textarea>
-        </fieldset>
-        <input class="contest-request__btn" type="submit" name="request" value="Отправить форму">
-        <span class="contest-request__note"><span class="contest-request__star">*</span> - Обязательные поля</span>
+        <div class="contest-request__travel-action">
+          <fieldset class="contest-request__fieldset contest-request__fieldset--travel-action">
+            <legend class="contest-request__title">
+              Ваши безбашенные достижения в путешествии
+            </legend>
+            <input class="contest-request__checkbox" id="action-1" type="checkbox" name="travel-actions" value="1" checked>
+            <label class="contest-request__label contest-request__label--checkbox" for="action-1">Сделал селфи с акулой</label>
+            <input class="contest-request__checkbox" id="action-2" type="checkbox" name="travel-actions" value="2" checked>
+            <label class="contest-request__label contest-request__label--checkbox" for="action-2">Обгорел на пляже</label>
+            <input class="contest-request__checkbox" id="action-3" type="checkbox" name="travel-actions" value="3">
+            <label class="contest-request__label contest-request__label--checkbox" for="action-3">Видел Чака Норриса</label>
+            <input class="contest-request__checkbox" id="action-4" type="checkbox" name="travel-actions" value="4">
+            <label class="contest-request__label contest-request__label--checkbox" for="action-4">Накупил сувениров</label>
+            <input class="contest-request__checkbox" id="action-5" type="checkbox" name="travel-actions" value="5" checked>
+            <label class="contest-request__label contest-request__label--checkbox" for="action-5">Удержал башню</label>
+            <input class="contest-request__checkbox" id="action-6" type="checkbox" name="travel-actions" value="6">
+            <label class="contest-request__label contest-request__label--checkbox" for="action-6">Разгромил отель</label>
+          </fieldset>
+        </div>
+        <div class="contest-request__contacts">
+          <fieldset class="contest-request__fieldset contest-request__fieldset--contacts">
+            <legend class="contest-request__title">Контактные данные</legend>
+            <label class="contest-request__label contest-request__label--text" for="telephone">Номер телефона</label>
+            <input class="contest-request__text-field" id="telephone" type="tel" name="telephone" placeholder="+7 XXX XXX-XX-XX">
+            <label class="contest-request__label contest-request__label--text" for="email">Адрес почты</label>
+            <input class="contest-request__text-field" id="email" type="email" name="email" placeholder="Введите почту">
+          </fieldset>
+        </div>
+        <div class="contest-request__pink-version">
+          <fieldset class="contest-request__fieldset contest-request__fieldset--pink-version">
+            <legend class="contest-request__title">
+              С каким приложением путешествовали?
+            </legend>
+            <input class="contest-request__radio" id="app-1" type="radio" name="application-version" value="1" checked>
+            <label class="contest-request__label contest-request__label--radio" for="app-1">Pink для iOS</label>
+            <input class="contest-request__radio" id="app-2" type="radio" name="application-version" value="2">
+            <label class="contest-request__label contest-request__label--radio" for="app-2">Pink на Android</label>
+            <input class="contest-request__radio" id="app-3" type="radio" name="application-version" value="3">
+            <label class="contest-request__label contest-request__label--radio" for="app-3">Windows Phone</label>
+          </fieldset>
+        </div>
+        <div class="contest-request__story">
+          <fieldset class="contest-request__fieldset contest-request__fieldset--story">
+            <legend class="contest-request__title">Опишите свои эмоции</legend>
+            <textarea class="contest-request__text-field" id="story" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="6"></textarea>
+          </fieldset>
+        </div>
+        <div class="contest-request__btns">
+          <input class="contest-request__btn" type="submit" name="request" value="Отправить форму">
+          <span class="contest-request__note"><span class="contest-request__star">*</span> - Обязательные поля</span>
+        </div>
       </form>
     </main>
     <footer class="main-footer">
