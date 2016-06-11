@@ -1,67 +1,70 @@
 .download-block {
 
   padding: 28px 0;
+  padding-bottom: 24px;
   min-width: 320px;
   background-color: $download-bg-color;
   text-align: center;
-
-  h2 {
-    display: none;
-  }
-
-  p {
-    @include font($fweight: 300, $fcolor: $white);
-
-    margin-top: 0;
-    margin-bottom: 8px;
-  }
-
-  &__wrapper {
-    @include centering();
-  }
 }
+
+.download-block h2 {
+  display: none;
+}
+
+.download-block p {
+  @include font($fweight: 300, $fcolor: $white);
+
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.download-block__wrapper {
+  @include centering();
+}
+
 
 @media (min-width: 700px) {
   .download-block {
+    @include centering();
+
     position: relative;
     margin-top: -619px;
-    padding: 85px 0;
+    margin-bottom: 40px;
+    padding: 64px 0;
     background-color: transparent;
-    z-index: 10px;
-
-    &__wrapper {
-      width: 300px;
-      margin-left: 6%;
-    }
-
-    h2 {
-      @include font(40px, auto, 300, $white);
-
-      display: block;
-      margin-top: 0;
-      margin-bottom: 40px;
-      padding: 0 50px;
-    }
-
-    p {
-      margin-bottom: 0;
-      font-size: 18px;
-    }
+    z-index: 10;
+  }
+  .download-block__wrapper {
+    width: 300px;
+    margin-left: 8px;
   }
 
+  .download-block h2 {
+    @include font(40px, auto, 300, $white);
+
+    display: block;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 0 50px;
+  }
+
+  .download-block p {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1200px) {
   .download-block {
     padding: 118px 0;
     margin-top: -745px;
+  }
 
-    &__wrapper {
-      margin-left: 11%;
-    }
+  .download-block__wrapper {
+    margin-left: 11%;
+  }
 
-    h2 {
-      margin-bottom: 60px;
-    }
+  .download-block h2 {
+    margin-bottom: 60px;
   }
 }

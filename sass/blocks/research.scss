@@ -15,15 +15,15 @@
   .research__item {
     @include font();
 
-    padding: 100px 10px;
-    padding-left: 310px;
+    padding: 95px 0px;
+    padding-left: 320px;
   }
 
   .research__item h3 {
     @include font(30px, 36px, bold, $black);
 
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding-right: 100px;
   }
 

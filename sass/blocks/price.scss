@@ -1,5 +1,5 @@
 .price {
-  padding-top: 88px;
+  padding-top: 92px;
   padding-bottom: 46px;
   min-width: 320px;
   background-color: $stripe-bg-color;
@@ -10,7 +10,7 @@
 }
 
 .price__table {
-  margin-bottom: 40px;
+  margin-bottom: 31px;
   border-collapse: collapse;
 }
 
@@ -23,7 +23,7 @@
 .price__plan {
   @include font(18px, 30px);
 
-  padding: 18px 23px;
+  padding: 17px 23px;
   text-align: center;
   border: 2px solid $thead-bg-color;
 
@@ -77,7 +77,7 @@
   @include font($lheight: 30px);
 
   position: relative;
-  padding: 18px 23px;
+  padding: 14px 20px;
   text-align: left;
   text-transform: uppercase;
   border: 2px solid $table-border-color;
@@ -104,18 +104,27 @@
 
   &--off {
     position: relative;
-    width: 35px;
-    height: 3px;
-    background-color: #f25b26;
+    width: 1px;
+    height: 1px;
     transform: rotate(45deg);
 
     &::before {
       content: '';
       position: absolute;
-      top: -17.5px;
-      left: calc(50% - 1.5px);
+      top: 0;
+      left: 0;
       width: 3px;
       height: 35px;
+      background-color: #f25b26;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: -16px;
+      width: 35px;
+      height: 3px;
       background-color: #f25b26;
     }
   }
@@ -123,9 +132,12 @@
 
 @media (max-width: 699px) {
 
+  .price__feature {
+    padding-right: 16px;
+  }
+
   .price__feature-status {
     float: right;
-    margin: 10px 0;
   }
 
   .price__table-raw td[class*="--none"] {
@@ -184,6 +196,10 @@
     overflow-x: none;
   }
 
+  .price__slider-toggles {
+    display: none;
+  }
+
   .price__table {
     @include centering();
 
@@ -192,7 +208,7 @@
 
   .price__plan {
     font-size: 16px;
-    padding: 12px 30px;
+    padding: 8px 30px;
   }
 
   .price__plan-name {
@@ -204,7 +220,7 @@
   }
 
   .price__feature {
-    padding: 10px 17px;
+    padding: 7px 17px;
     text-align: center;
 
     &--none {
@@ -214,6 +230,13 @@
 
   .price__feature-name {
     display: none;
+  }
+
+  .price__feature-status {
+    vertical-align: top;
+    &--off {
+      left: 6px;
+    }
   }
 
   .price__feature--none .price__feature-name {

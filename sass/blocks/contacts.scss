@@ -9,20 +9,20 @@
 .contacts__information {
   @include centering();
 
-  padding-top: 46px;
-  padding-bottom: 40px;
+  padding-top: 42px;
+  padding-bottom: 36px;
 }
 
 .contacts__slogan {
   @include font(24px, normal, 300);
 
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .contacts__item {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 
   &:last-child {
     margin-bottom: 0;
@@ -52,24 +52,27 @@
 
 @media (min-width: 700px) {
   .contacts__information {
-    padding-top: 56px;
+    padding-top: 44px;
     padding-bottom: 26px;
   }
 
   .contacts__slogan {
     font-size: 40px;
-    margin-bottom: 56px;
+    line-height: 50px;
+    margin-bottom: 44px;
   }
 
   .contacts__item {
     display: inline-block;
+    box-sizing: border-box;
+    width: 48%;
     padding: 0 40px;
-    margin-bottom: 50px;
+    margin-bottom: 46px;
     vertical-align: top;
   }
 
   .contacts__item b {
-    font-size: 15px;
+    font-size: 18px;
     line-height: normal;
   }
 
@@ -78,7 +81,7 @@
   }
 
   .contacts__map {
-    height: 378px;
+    height: 374px;
     background-position: 50% 50%, 50% 100%;
     background-size: auto, cover;
   }
