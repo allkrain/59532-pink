@@ -399,10 +399,6 @@ input[class*="radio"]:checked + label[class*="radio"]::after {
       flex-wrap: wrap;
       justify-content: space-between;
     }
-
-    &--pink-version {
-      width: 430px;
-    }
   }
 
   .contest-request__fullname {
