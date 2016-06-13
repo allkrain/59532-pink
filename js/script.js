@@ -15,3 +15,24 @@ navBtn.addEventListener('click', function() {
     navMain.classList.remove('main-menu--open');
   }
 });
+
+//карта
+
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [59.9387, 30.3236],
+            zoom: 16
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark([59.938600, 30.322629], {
+            hintContent: 'Pink',
+            balloonContent: 'Pink'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '../../img/icon-map-marker.svg',
+            iconImageSize: [36, 46],
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+});
