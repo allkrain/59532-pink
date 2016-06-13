@@ -17,14 +17,21 @@
 }
 
 @mixin centering() {
-  width: 280px;
+//  width: 280px;
+//  margin: 0 auto;
+//
+//  @media (min-width: 700px) {
+//    width: 620px;
+//  }
+//
+//  @media (min-width: 1200px) {
+//    width: 960px;
+//  }
   margin: 0 auto;
+  width: 87.5%;
 
   @media (min-width: 700px) {
-    width: 620px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 960px;
+    width: 88.6%;
+    max-width: 960px;
   }
 }
