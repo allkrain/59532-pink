@@ -1,6 +1,8 @@
 .gallery {
   @include font(14px, 30px);
 
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
   text-align: center;
 }
@@ -16,17 +18,25 @@
 .gallery__list {
   @include centering();
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 0;
   list-style: none;
 }
 
 .gallery__item {
 
-  margin-bottom: 20px;
+//  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   text-align: center;
 
   &--panorama {
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     &::before {
       @include font(12px, 24px, bold, $white);
@@ -44,7 +54,15 @@
   }
 }
 
+.gallery__image {
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
 .gallery__image img {
+  margin: 0;
+  font-size: 0;
   line-height: 0;
   width: 280px;
   height: 180px;
@@ -66,22 +84,43 @@
 
   .gallery__list {
     @include centering();
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
   }
 
   .gallery__list li {
+//    display: inline-block;
+//    margin-right: 16px;
+//    width: 300px;
+//    vertical-align: top;
+//
+//    &:nth-child(even) {
+//      margin-right: 0;
+//    }
+  }
+
+  .gallery__item {
     display: inline-block;
-    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+//    margin-right: 16px;
     width: 300px;
     vertical-align: top;
 
     &:nth-child(even) {
       margin-right: 0;
     }
-  }
 
-  .gallery__item {
     &--panorama {
-      margin-bottom: 50px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+
+      &::before {
+        top: 60px;
+      }
     }
   }
 
@@ -103,27 +142,19 @@
   .gallery__slogan {
     padding-left: 185px;
     padding-right: 185px;
-    padding-bottom: 90px;
-  }
-
-  .gallery__list li {
-    &:nth-child(even) {
-      margin-right: 16px;
-    }
-
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
+    padding-bottom: 84px;
   }
 
   .gallery__item {
-    margin-bottom: 56px;
+    margin-bottom: 34px;
 
     &--panorama {
-      margin-bottom: 50px;
+      margin: 0;
+      margin-bottom: 10px;
 
       &::before {
         top: 55px;
+        right: 11%;
       }
     }
   }

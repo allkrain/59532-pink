@@ -23,12 +23,12 @@
 }
 
 .main-header h1 {
-  @include font(24px, auto, 300, $white);
+  @include font(24px, normal, 300, $white);
   @include centering();
 
   padding: {
-    top: 30px;
-    bottom: 85px;
+    top: 20px;
+    bottom: 80px;
   }
   text-align: center;
 }
@@ -49,9 +49,10 @@
 
   .main-header h1 {
     font-size: 50px;
+    line-height: 60px;
     padding: {
-      top: 78px;
-      bottom: 150px;
+      top: 70px;
+      bottom: 140px;
     }
   }
 }
@@ -69,9 +70,10 @@
   }
 
   .main-header h1 {
-    padding: {
-      top: 75px;
-      bottom: 113px;
+    box-sizing: border-box;
+    padding: 160px {
+      top: 70px;
+      bottom: 98px;
     }
   }
 }
