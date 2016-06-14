@@ -19,3 +19,17 @@
     }
   }
 }
+
+@media (min-width: 1200px) {
+  .logo {
+    padding: {
+      top: 28px;
+      bottom: 40px
+    }
+  }
+
+  .logo__image {
+    width: 150px;
+    height: 40px;
+  }
+}

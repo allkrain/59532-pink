@@ -1,10 +1,14 @@
 .main-menu {
+  display: flex;
+  flex-direction: column;
   position: relative;
   box-sizing: border-box;
 }
 
 .main-menu__wrapper-header {
-  @include centering();
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .main-menu__list {
@@ -37,7 +41,7 @@
 .main-menu__btn {
   @include font($fsize: 0, $fcolor: inherit);
 
-  float: right;
+//  float: right;
   position: relative;
   margin: 11% 0;
   width: 50px;
@@ -79,6 +83,10 @@
 }
 
 @media (max-width: 1199px) {
+  .main-menu__wrapper-header {
+    @include centering();
+  }
+
   .main-menu--open .main-menu__list {
     display: block;
   }
@@ -155,24 +163,32 @@
 
   .main-menu__wrapper {
     @include centering();
-  }
 
-  .main-menu__wrapper-header {
-    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .main-menu__list {
     position: static;
     display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
   }
 
   .main-menu__list li{
     display: inline-block;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .main-menu__item {
     display: inline-block;
-    margin: 0 41px;
     font-weight: normal;
     line-height: 18px;
     text-transform: none;
@@ -182,12 +198,8 @@
     &--header {
       margin: {
         left: 0;
-        right: 130px;
+        right: 168px;
       }
-    }
-
-    &::last-child {
-      margin-right: 0;
     }
   }
 

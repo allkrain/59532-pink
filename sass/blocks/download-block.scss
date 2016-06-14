@@ -40,7 +40,7 @@
   }
 
   .download-block h2 {
-    @include font(40px, auto, 300, $white);
+    @include font(40px, normal, 300, $white);
 
     display: block;
     margin-top: 0;
@@ -56,15 +56,19 @@
 
 @media (min-width: 1200px) {
   .download-block {
-    padding: 118px 0;
+    padding: 112px 0;
     margin-top: -745px;
+    margin-bottom: 0;
   }
 
   .download-block__wrapper {
-    margin-left: 11%;
+    margin-left: 0;
   }
 
   .download-block h2 {
-    margin-bottom: 60px;
+    padding: 0;
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 50px;
   }
 }

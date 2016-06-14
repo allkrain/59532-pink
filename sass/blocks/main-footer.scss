@@ -32,9 +32,16 @@
     display: block;
   }
 
+  .main-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .main-footer__item {
     display: inline-block;
-    margin-right: 70px;
+//    margin-right: 70px;
     margin-bottom: 0;
     padding: 36px 0;
     vertical-align: top;
@@ -46,8 +53,12 @@
 }
 
 @media (min-width: 1200px) {
+  .main-footer__wrapper {
+    height: 128px;
+  }
+
   .main-footer__item {
-    margin-right: 230px;
-    padding: 68px 0;
+//    margin-right: 230px;
+//    padding: 76px 0;
   }
 }

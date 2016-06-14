@@ -247,8 +247,13 @@
 
 @media (min-width: 1200px) {
   .price {
-    padding-top: 148px;
+    padding-top: 128px;
     padding-bottom: 92px;
+  }
+
+  .price__table td {
+    box-sizing: border-box;
+    width: 25%;
   }
 
   .price__plan {
@@ -265,7 +270,7 @@
   }
 
   .price__feature {
-    padding: 16px 22px;
+    padding: 15px 22px;
     font-size: 18px;
   }
 }
