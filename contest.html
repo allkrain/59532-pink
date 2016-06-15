@@ -2,40 +2,45 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Пинк</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-menu">
-        <div class="main-menu__item main-menu__item--header">
-          <a class="logo" href="index.html">
-            <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="" width="75" height="23">
-            Pink
-          </a>
-          <button class="main-menu__btn" type="button">Меню</button>
+      <nav class="main-menu main-menu--nojs">
+        <div class="main-menu__wrapper">
+          <div class="main-menu__item main-menu__item--header">
+            <div class="main-menu__wrapper-header">
+              <a class="logo" href="index.html">
+                <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="" width="75" height="23">
+                Pink
+              </a>
+              <button class="main-menu__btn" type="button">Меню</button>
+            </div>
+          </div>
+          <ul class="main-menu__list">
+            <li>
+              <a class="main-menu__item" href="index.html">Главная</a>
+            </li>
+            <li>
+              <a class="main-menu__item" href="photo.html">Фотографии</a>
+            </li>
+            <li>
+              <a class="main-menu__item main-menu__item--active">Конкурс</a>
+            </li>
+            <li>
+              <a class="main-menu__item" href="https://htmlacademy.ru">HTML Academy</a>
+            </li>
+          </ul>
         </div>
-        <ul class="main-menu__list">
-          <li>
-            <a class="main-menu__item" href="index.html">Главная</a>
-          </li>
-          <li>
-            <a class="main-menu__item" href="photo.html">Фотографии</a>
-          </li>
-          <li>
-            <a class="main-menu__item main-menu__item--active">Конкурс</a>
-          </li>
-          <li>
-            <a class="main-menu__item" href="https://htmlacademy.ru">HTML Academy</a>
-          </li>
-        </ul>
       </nav>
       <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
     </header>
     <main>
       <form class="contest-request" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <p class="contest-request__slogan">
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <br/>Пожалуйста заполните форму ниже:
         </p>
         <div class="contest-request__fullname">
           <label class="contest-request__label contest-request__label--text" for="lastname">Фамилия:</label>
@@ -46,65 +51,87 @@
           <input class="contest-request__text-field" id="middlename" type="text" name="middlename" placeholder="Ну и отчество тоже">
         </div>
         <div class="contest-request__travel-action">
-          <p class="contest-request__title">
-            Ваши безбашенные достижения в путешествии
-          </p>
-          <input class="contest-request__checkbox" id="action-1" type="checkbox" name="travel-actions" value="1" checked>
-          <label class="contest-request__label contest-request__label--checkbox" for="action-1">Сделал селфи с акулой</label>
-          <input class="contest-request__checkbox" id="action-2" type="checkbox" name="travel-actions" value="2" checked>
-          <label class="contest-request__label contest-request__label--checkbox" for="action-2">Обгорел на пляже</label>
-          <input class="contest-request__checkbox" id="action-3" type="checkbox" name="travel-actions" value="3">
-          <label class="contest-request__label contest-request__label--checkbox" for="action-3">Видел Чака Норриса</label>
-          <input class="contest-request__checkbox" id="action-4" type="checkbox" name="travel-actions" value="4">
-          <label class="contest-request__label contest-request__label--checkbox" for="action-4">Накупил сувениров</label>
-          <input class="contest-request__checkbox" id="action-5" type="checkbox" name="travel-actions" value="5" checked>
-          <label class="contest-request__label contest-request__label--checkbox" for="action-5">Удержал башню</label>
-          <input class="contest-request__checkbox" id="action-6" type="checkbox" name="travel-actions" value="6">
-          <label class="contest-request__label contest-request__label--checkbox" for="action-6">Разгромил отель</label>
+          <fieldset class="contest-request__fieldset contest-request__fieldset--travel-action">
+            <legend class="contest-request__title">
+              Ваши безбашенные достижения в путешествии
+            </legend>
+            <div class="contest-request__flex contest-request__flex--travel-action">
+              <input class="contest-request__checkbox" id="action-1" type="checkbox" name="travel-actions" value="1" checked>
+              <label class="contest-request__label contest-request__label--checkbox" for="action-1">Сделал селфи с акулой</label>
+              <input class="contest-request__checkbox" id="action-2" type="checkbox" name="travel-actions" value="2" checked>
+              <label class="contest-request__label contest-request__label--checkbox" for="action-2">Обгорел на пляже</label>
+              <input class="contest-request__checkbox" id="action-3" type="checkbox" name="travel-actions" value="3">
+              <label class="contest-request__label contest-request__label--checkbox" for="action-3">Видел Чака Норриса</label>
+              <input class="contest-request__checkbox" id="action-4" type="checkbox" name="travel-actions" value="4">
+              <label class="contest-request__label contest-request__label--checkbox" for="action-4">Накупил сувениров</label>
+              <input class="contest-request__checkbox" id="action-5" type="checkbox" name="travel-actions" value="5" checked>
+              <label class="contest-request__label contest-request__label--checkbox" for="action-5">Удержал башню</label>
+              <input class="contest-request__checkbox" id="action-6" type="checkbox" name="travel-actions" value="6">
+              <label class="contest-request__label contest-request__label--checkbox" for="action-6">Разгромил отель</label>
+            </div>
+          </fieldset>
         </div>
-        <div class="contes-request__contacts">
-          <label class="contest-request__label contest-request__label--text" for="telephone">Номерок телефончика</label>
-          <input class="contest-request__text-field" id="telephone" type="tel" name="telephone" placeholder="Номер, пожалуйста">
-          <label class="contest-request__label contest-request__label--text" for="email">Адресок почты</label>
-          <input class="contest-request__text-field" id="email" type="email" name="email" placeholder="E-mail, пожалуйста">
+        <div class="contest-request__contacts">
+          <fieldset class="contest-request__fieldset contest-request__fieldset--contacts">
+            <legend class="contest-request__title">Контактные данные</legend>
+            <div class="contest-request__flex contest-request__flex--contacts">
+              <label class="contest-request__label contest-request__label--text" for="telephone">Номер телефона</label>
+              <input class="contest-request__text-field" id="telephone" type="tel" name="telephone" placeholder="+7 XXX XXX-XX-XX">
+              <label class="contest-request__label contest-request__label--text" for="email">Адрес почты</label>
+              <input class="contest-request__text-field" id="email" type="email" name="email" placeholder="Введите почту">
+            </div>
+          </fieldset>
         </div>
         <div class="contest-request__pink-version">
-          <p class="contest-request__title">
-            С каким приложением путешествовали
-          </p>
-          <input class="contest-request__radio" id="app-1" type="radio" name="application-version" value="1" checked>
-          <label class="contest-request__label contest-request__label--radio" for="app-1">Pink для iOS</label>
-          <input class="contest-request__radio" id="app-2" type="radio" name="application-version" value="2">
-          <label class="contest-request__label contest-request__label--radio" for="app-2">Pink на Android</label>
-          <input class="contest-request__radio" id="app-3" type="radio" name="application-version" value="3">
-          <label class="contest-request__label contest-request__label--radio" for="app-3">Windows Phone</label>
+          <fieldset class="contest-request__fieldset contest-request__fieldset--pink-version">
+            <legend class="contest-request__title">
+              С каким приложением путешествовали?
+            </legend>
+            <div class="contest-request__flex contest-request__flex--pink-version">
+              <input class="contest-request__radio" id="app-1" type="radio" name="application-version" value="1" checked>
+              <label class="contest-request__label contest-request__label--radio" for="app-1">Pink для iOS</label>
+              <input class="contest-request__radio" id="app-2" type="radio" name="application-version" value="2">
+              <label class="contest-request__label contest-request__label--radio" for="app-2">Pink на Android</label>
+              <input class="contest-request__radio" id="app-3" type="radio" name="application-version" value="3">
+              <label class="contest-request__label contest-request__label--radio" for="app-3">Windows Phone</label>
+            </div>
+          </fieldset>
         </div>
         <div class="contest-request__story">
-          <label class="contest-request__label contest-request__label--text" for="story">Опишите свои эмоции</label>
-          <textarea class="contest-request__text-field" id="story" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="6"></textarea>
+          <fieldset class="contest-request__fieldset contest-request__fieldset--story">
+            <legend class="contest-request__title">Опишите свои эмоции</legend>
+            <div class="contest-request__flex contest-request__flex--story">
+              <textarea class="contest-request__text-field" id="story" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="6"></textarea>
+            </div>
+          </fieldset>
         </div>
-        <input class="contest-request__btn" type="submit" name="request" value="Отправить форму">
-        <span class="contest-request__note"><span class="contest-request__star">*</span> - Обязательные поля</span>
+        <div class="contest-request__btns">
+          <input class="contest-request__btn" type="submit" name="request" value="Отправить форму">
+          <span class="contest-request__note"><span class="contest-request__star">*</span> - Обязательные поля</span>
+        </div>
       </form>
     </main>
     <footer class="main-footer">
-      <a class="main-footer__item logo" href="index.html">
-        <img class="logo__image" src="img/logo-pink-blue-mobile.svg" alt="" width="147" height="41">
-        Pink
-      </a>
-      <div class="main-footer__item social">
-        <ul class="social__list">
-          <li><a class="social__item social__item--twitter" href="https://twitter.com">Мы в Twitter</a></li>
-          <li><a class="social__item social__item--fb" href="https://facebook.com">Мы на Facebook</a></li>
-          <li><a class="social__item social__item--youtube" href="https://youtube.com">Мы на Youtube</a></li>
-        </ul>
-      </div>
-      <div class="main-footer__item copyright">
-        <span>Раработано</span>
-        <a class="copyright__link" href="https://htmlacademy.ru">
-          <img src="img/htmlacademy.svg" alt="htmlacademy" width="25" height="30">
+      <div class="main-footer__wrapper">
+        <a class="main-footer__item logo" href="index.html">
+          <img class="logo__image" src="img/logo-pink-blue-mobile.svg" alt="" width="147" height="41">
+          Pink
         </a>
+        <div class="main-footer__item social">
+          <ul class="social__list">
+            <li><a class="social__item social__item--twitter" href="https://twitter.com">Мы в Twitter</a></li>
+            <li><a class="social__item social__item--fb" href="https://facebook.com">Мы на Facebook</a></li>
+            <li><a class="social__item social__item--youtube" href="https://youtube.com">Мы на Youtube</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__item copyright">
+          <span>Раработано</span>
+          <a class="copyright__link" href="https://htmlacademy.ru">
+            <img src="img/logo-htmlacademy.svg" alt="htmlacademy" width="27" height="35">
+          </a>
+        </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

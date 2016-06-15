@@ -2,47 +2,52 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Пинк</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-menu">
-        <div class="main-menu__item">
-          <a class="logo" href="index.html">
-            <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="" width="75" height="23">
-            Pink
-          </a>
-          <button class="main-menu__btn" type="button">Меню</button>
+      <nav class="main-menu main-menu--nojs">
+        <div class="main-menu__wrapper">
+          <div class="main-menu__item main-menu__item--header">
+            <div class="main-menu__wrapper-header">
+              <a class="logo" href="index.html">
+                <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="" width="75" height="23">
+                Pink
+              </a>
+              <button class="main-menu__btn" type="button">Меню</button>
+            </div>
+          </div>
+          <ul class="main-menu__list">
+            <li>
+              <a class="main-menu__item" href="index.html">Главная</a>
+            </li>
+            <li>
+              <a class="main-menu__item main-menu__item--active">Фотографии</a>
+            </li>
+            <li>
+              <a class="main-menu__item" href="contest.html">Конкурс</a>
+            </li>
+            <li>
+              <a class="main-menu__item" href="https://htmlacademy.ru">HTML Academy</a>
+            </li>
+          </ul>
         </div>
-        <ul class="main-menu__list">
-          <li>
-            <a class="main-menu__item" href="index.html">Главная</a>
-          </li>
-          <li>
-            <a class="main-menu__item main-menu__item--active">Фотографии</a>
-          </li>
-          <li>
-            <a class="main-menu__item" href="contest.html">Конкурс</a>
-          </li>
-          <li>
-            <a class="main-menu__item" href="https://htmlacademy.ru">HTML Academy</a>
-          </li>
-        </ul>
       </nav>
       <h1>Фотографии пользователей</h1>
     </header>
     <main>
       <section class="gallery">
         <h2 class="visually-hidden">Галлерея</h2>
-        <p>
-          Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+        <p class="gallery__slogan">
+          Взгляните на фотографии, которые выкладывают пользователи!  Видите, как не хватает ваших?
         </p>
         <div class="gallery__item gallery__item--panorama">
           <a class="gallery__image gallery__image--panorama" href="photo-page.html">
             <img src="img/panorama-mobile@1x.jpg" alt="" width="320" height="137">
           </a>
-          <div class="comment">
+          <div class="comment comment--panorama">
             <div class="comment__author">
               <b class="comment__author-name">Анна</b>
               <time class="comment__publication-time" datetime="2016-05-28T12:00:00">(5 минут назад)</time>
@@ -176,48 +181,55 @@
       </section>
       <section class="upload-block">
         <h2 class="visually-hidden">Разместите свои фотографии</h2>
-        <p>
+        <p class="upload-block__slogan">
           Затмите их всех!<br/>Выкладывайте все, что накопилось в телефоне!
         </p>
         <form class="upload-block__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="upload-block__promo">
-            <img src="img/photo-7-mobile@1x.jpg" alt="" class="upload-block__promo-image" width="280" height="374">
-          </div>
-          <div class="upload-block__filters filters">
-            <div class="filters__label">
-              <label class="filters__label-item filters__label-item--active filters__label-item--crop" for="crop-tool">Обрезать</label>
-              <label class="filters__label-item filters__label-item--fill" for="fill-tool">Заливка</label>
-              <label class="filters__label-item filters__label-item--contrast" for="contrast-tool">Контрастность</label>
+          <div class="upload-block__wrapper">
+            <div class="upload-block__promo">
+              <img src="img/photo-7-mobile@1x.jpg" alt="" class="upload-block__promo-image" width="280" height="374">
             </div>
-            <div class="filters__range">
-              <input class="filters__range-item filters__range-item--crop" id="crop-tool" type="range" name="crop-tool" min="0" max="100">
-              <input class="filters__range-item filters__range-item--fill filters__range-item--hidden" id="fill-tool" type="range" name="fill-tool" min="0" max="100">
-              <input class="filters__range-item filters__range-item--contrast filters__range-item--hidden" id="contrast-tool" type="range" name="contrast-tool" min="0" max="100">
+            <div class="upload-block__filters filters">
+              <div class="filters__label">
+                <label class="filters__label-item filters__label-item--active filters__label-item--crop" for="crop-tool">Обрезать</label>
+                <label class="filters__label-item filters__label-item--fill" for="fill-tool">Заливка</label>
+                <label class="filters__label-item filters__label-item--contrast" for="contrast-tool">Контрастность</label>
+              </div>
+              <div class="filters__range">
+                <input class="filters__range-item filters__range-item--crop" id="crop-tool" type="range" name="crop-tool" min="0" max="100">
+                <input class="filters__range-item filters__range-item--fill filters__range-item--hidden" id="fill-tool" type="range" name="fill-tool" min="0" max="100">
+                <input class="filters__range-item filters__range-item--contrast filters__range-item--hidden" id="contrast-tool" type="range" name="contrast-tool" min="0" max="100">
+              </div>
+            </div>
+            <div class="upload-block__btns">
+              <button class="btn btn--upload" type="submit">Запостить</button>
+              <button class="btn btn--chancel" type="reset">Отмена</button>
             </div>
           </div>
-          <input class="btn" type="submit" name="post-btn" value="Запостить">
-          <input class="btn btn--disabled" type="reset" name="reset-btn" value="Отмена">
         </form>
       </section>
     </main>
     <footer class="main-footer">
-      <a class="main-footer__item logo" href="index.html">
-        <img class="logo__image" src="img/logo-pink-blue-mobile.svg" alt="" width="147" height="41">
-        Pink
-      </a>
-      <div class="main-footer__item social">
-        <ul class="social__list">
-          <li><a class="social__item social__item--twitter" href="https://twitter.com">Мы в Twitter</a></li>
-          <li><a class="social__item social__item--fb" href="https://facebook.com">Мы на Facebook</a></li>
-          <li><a class="social__item social__item--youtube" href="https://youtube.com">Мы на Youtube</a></li>
-        </ul>
-      </div>
-      <div class="main-footer__item copyright">
-        <span>Разработано</span>
-        <a class="copyright__link" href="https://htmlacademy.ru">
-          <img src="img/htmlacademy.svg" alt="htmlacademy" width="25" height="30">
+      <div class="main-footer__wrapper">
+        <a class="main-footer__item logo" href="index.html">
+          <img class="logo__image" src="img/logo-pink-blue-mobile.svg" alt="" width="147" height="41">
+          Pink
         </a>
+        <div class="main-footer__item social">
+          <ul class="social__list">
+            <li><a class="social__item social__item--twitter" href="https://twitter.com">Мы в Twitter</a></li>
+            <li><a class="social__item social__item--fb" href="https://facebook.com">Мы на Facebook</a></li>
+            <li><a class="social__item social__item--youtube" href="https://youtube.com">Мы на Youtube</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__item copyright">
+          <span>Разработано</span>
+          <a class="copyright__link" href="https://htmlacademy.ru">
+            <img src="img/logo-htmlacademy.svg" alt="htmlacademy" width="27" height="35">
+          </a>
+        </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

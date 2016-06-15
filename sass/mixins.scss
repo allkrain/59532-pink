@@ -1,6 +1,37 @@
-@mixin font($fsize: 14px, $lheight: 24px, $fweight: normal) {
-  font-family: $font-stack;
-  font-size: $fsize;
+@mixin font($fsize: 14px, $lheight: 24px, $fweight: normal, $fcolor: $gray-font-color) {
+  font: {
+    family: $font-stack;
+    size: $fsize;
+    weight: $fweight;
+  }
   line-height: $lheight;
-  font-weight: $fweight;
+  color: $fcolor;
+}
+
+@mixin clearfix() {
+  &::after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin centering() {
+//  width: 280px;
+//  margin: 0 auto;
+//
+//  @media (min-width: 700px) {
+//    width: 620px;
+//  }
+//
+//  @media (min-width: 1200px) {
+//    width: 960px;
+//  }
+  margin: 0 auto;
+  width: 87.5%;
+
+  @media (min-width: 700px) {
+    width: 88.6%;
+    max-width: 940px;
+  }
 }

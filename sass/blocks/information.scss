@@ -1,34 +1,180 @@
 .information {
-  @include font(24px, auto, 300);
+  @include font();
 
-  background-color: $stripe-bg-color;
+  min-width: 320px;
+  padding-bottom: 290px;
+  background: {
+    color: $stripe-bg-color;
+    image: url('../img/iphone-screen-mobile@1x.png');
+    repeat: no-repeat;
+    position: 50% 106%;
+  }
   text-align: center;
+}
 
-  &__slogan {
-    color: $gray-font-color;
-    background-color: $white;
+.information__wrapper {
+  @include centering();
 
-    span {
-      display: block;
+  padding-top: 78px;
+}
+
+.information__slogan {
+  @include font(24px, normal, 300);
+
+  margin: 0 auto;
+  padding: 32px;
+  color: $gray-font-color;
+  background-color: $white;
+}
+
+.information__slogan span {
+  display: block;
+
+  &:first-child {
+    margin: {
+      top: 4px;
+      bottom: 20px;
+    }
+  }
+}
+
+.information__item {
+  margin-bottom: 30px;
+}
+
+.information__item h3 {
+  @include font(18px, 24px, bold);
+
+  margin: 0;
+  margin-bottom: 12px;
+  color: $black;
+}
+
+.information__item p {
+  @include font();
+
+  margin: 0;
+  color: $gray-font-color;
+}
+
+@media (min-width: 700px) {
+  .information {
+    padding-bottom: 1px;
+    background: {
+      image: url('../img/iphone-screen-mobile@1x.png');
+      repeat: no-repeat;
+      position: 10% 133%;
+      size: 39%;
     }
   }
 
-  &__item {
+  .information__wrapper {
+    padding-top: 70px;
+    padding-bottom: 18px;
+  }
 
-    h3 {
-      @include font(18px, 24px, bold);
+  .information__slogan {
+    position: relative;
+    padding: 48px 10px;
+    font-size: 40px;
+    line-height: 50px;
+  }
 
-      margin: 0;
-      margin-bottom: 12px;
-      color: $black;
+  .information__slogan span {
+
+    &:first-child {
+      margin: {
+        top: 0;
+        bottom: 0;
+      }
     }
 
-    p {
-      @include font();
-
-      margin: 0;
-      margin-bottom: 35px;
-      color: $gray-font-color;
+    &:last-child {
+      padding: {
+        left: 145px;
+        right: 145px;
+      }
     }
+  }
+
+  .information__item {
+    margin-left: 320px;
+    margin-bottom: 34px;
+    text-align: left;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .information {
+    padding-bottom: 1px;
+    background-image: none;
+  }
+
+  .information__wrapper {
+    padding-top: 300px;
+    text-align: center;
+    background: {
+      image:
+        url('../img/iphone-screen-mobile@1x.png'),
+        url('../img/iphone-screen-mobile@1x.png'),
+        url('../img/iphone-screen-mobile@1x.png');
+      repeat: no-repeat;
+      position: 10% 0%, 50% 0%, 90% 0%;
+      size: 18%;
+    }
+  }
+
+  .information__slogan {
+    position: relative;
+    padding: 68px 10px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .information__slogan span {
+
+    &:first-child {
+      margin: {
+        top: 6px;
+        bottom: 0;
+      }
+    }
+
+    &:last-child {
+      padding: {
+        left: 260px;
+        right: 260px;
+      }
+    }
+  }
+
+  .information__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 26%;
+    margin-left: 7%;
+    margin-bottom: 68px;
+    padding-top: 60px;
+    background-color: $stripe-bg-color;
+    text-align: center;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .information__item h3 {
+    margin-bottom: 23px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .information__item p {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

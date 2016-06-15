@@ -1,62 +1,460 @@
 .contest-request {
-  @include font(14px, 30px);
+  @include font($lheight: 30px);
 
-  color: $gray-font-color;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
 
-  &__title {
-    @include font(14px, 18px);
+.contest-request__slogan {
+  @include centering();
 
-    color: $pink;
+  padding-top: 46px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.contest-request__fieldset {
+  @include centering();
+
+//  display: flex;
+//  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+}
+
+.contest-request__flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.contest-request__title {
+  @include font($lheight: 18px, $fcolor: $pink);
+
+  margin-bottom: 32px;
+  padding: 0 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contest-request__label {
+  @include font(18px, 30px);
+
+  display: block;
+
+  &--text {
+    @include font($lheight: 30px, $fcolor: $pink);
+
+    margin-bottom: 6px;
+    padding-left: 22px;
     text-transform: uppercase;
   }
 
-  &__label {
-    @include font(18px, 30px);
+  &--checkbox {
+    position: relative;
+    margin-bottom: 42px;
+    padding: 4px 0;
+    padding-left: 70px;
 
-    color: $gray-font-color;
-
-    &--text {
-      @include font(14px, 30px);
-
-      color: $pink;
-      text-transform: uppercase;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 34px;
+      height: 34px;
+      border: 2px solid $table-border-color;
+      background-color: $white;
     }
   }
 
-  &__text-field {
-    @include font(18px, 30px);
+  &--radio {
+    position: relative;
+    margin-bottom: 42px;
+    padding: 4px 0;
+    padding-left: 70px;
 
-    padding: 17px 20px;
-    color: $gray-font-color;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid $table-border-color;
+      background-color: $white;
+    }
+  }
+}
+
+.contest-request__text-field {
+  @include font(18px, 30px);
+
+  margin-bottom: 16px;
+  padding: 17px 20px;
+  border: 2px solid $table-border-color;
+}
+
+.contest-request__fullname {
+  @include centering();
+
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+
+}
+
+.contest-request__checkbox,
+.contest-request__radio {
+  display: none;
+}
+
+.contest-request__travel-action {
+  padding-top: 28px;
+  padding-bottom: 5px;
+  background-color: $stripe-bg-color;
+}
+
+.contest-request__contacts {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 38px;
+}
+
+.contest-request__contacts legend {
+  display: none;
+}
+
+.contest-request__pink-version {
+  padding-top: 30px;
+  background-color: $stripe-bg-color;
+}
+
+.contest-request__story {
+  padding-top: 52px;
+  padding-bottom: 30px;
+}
+
+.contest-request__story legend {
+  margin-bottom: 12px;
+}
+
+.contest-request__btns {
+  @include centering();
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contest-request__note {
+  @include font($lheight: 30px);
+
+  display: block;
+  align-self: center;
+  padding-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.contest-request__star {
+  color: $pink;
+}
+
+.contest-request__btn {
+  @include font(18px, 30px, bold, $white);
+
+  margin-bottom: 38px;
+  padding: 18px 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  background-color: $green-btn-bg-color;
+}
+
+input[class*="checkbox"]:checked + label[class*="checkbox"]::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 19px;
+  width: 16px;
+  height: 8px;
+  border: 2px solid $pink;
+  border-top: none;
+  border-right: none;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+input[class*="radio"]:checked + label[class*="radio"]::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $pink;
+}
+
+
+@media (min-width: 700px) {
+  .contest-request__slogan {
+    padding-top: 94px;
+    padding-right: 40px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+
+  .contest-request__fieldset {
     border: 2px solid $table-border-color;
+
+    &--travel-action {
+      padding: 0 60px;
+      padding-top: 52px;
+      padding-bottom: 8px;
+    }
+
+    &--contacts {
+      padding: 0 60px;
+      padding-top: 46px;
+      padding-bottom: 2px;
+    }
+
+    &--pink-version {
+      padding: 50px 60px;
+      padding-bottom: 14px;
+    }
+
+    &--story {
+      padding: 0 60px;
+      padding-top: 46px;
+      padding-bottom: 36px;
+    }
   }
 
-  &__travel-action {
-    background-color: $stripe-bg-color;
+  .contest-request__title {
+    margin-bottom: 0;
   }
 
-  &__pink-version {
-    background-color: $stripe-bg-color;
+  .contest-request__label {
+
+  &--checkbox {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 4px 0;
+    padding-left: 60px;
   }
 
-  &__note {
-    @include font(14px, 30px);
+  &--radio {
+    margin-bottom: 36px;
+    padding: 4px 0;
+    padding-left: 60px;
+  }
+}
 
-    color: $gray-font-color;
+  .contest-request__fullname {
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 11px;
+    padding-bottom: 25px;
   }
 
-  &__star {
-    color: $pink;
+  .contest-request__fullname label {
+    align-self: center;
+    margin-bottom: 0;
+    margin-right: 20px;
+    padding-left: 0;
   }
 
-  &__btn {
-    @include font(18px, 30px, bold);
+  .contest-request__fullname .contest-request__text-field {
+    flex-grow: 1;
+    min-width: 75%;
+    margin: 25px 0;
+  }
 
-    padding: 18px 20px;
-    color: $white;
-    text-transform: uppercase;
-    text-align: center;
-    border: none;
-    background-color: $green-btn-bg-color;
+  .contest-request__travel-action {
+    order: 3;
+    padding-top: 0;
+    background-color: $white;
+  }
+
+  .contest-request__contacts {
+    order: 2;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .contest-request__contacts legend {
+    display: block;
+  }
+
+  .contest-request__contacts input {
+    margin-bottom: 8px;
+  }
+
+  .contest-request__contacts label {
+    margin-bottom: 28px;
+  }
+
+  .contest-request__contacts label[for="telephone"] {
+    order: 1;
+  }
+
+  .contest-request__contacts label[for="email"] {
+    order: 3;
+  }
+
+  .contest-request__contacts input[id=email] {
+    order: 2;
+  }
+
+  .contest-request__pink-version {
+    padding-bottom: 60px;
+    order: 1;
+    background-color: $white;
+  }
+
+  .contest-request__story {
+    order: 4;
+    padding-top: 56px;
+    padding-bottom: 66px;
+  }
+
+  .contest-request__btns {
+    order: 5;
+    flex-direction: row;
+    margin-bottom: 54px;
+  }
+
+  .contest-request__btn {
+    margin-right: auto;
+    margin-bottom: 0;
+    width: 300px;
+  }
+
+  .contest-request__note {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contest-request {
+    @include centering();
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  .contest-request__slogan {
+    padding-bottom: 78px;
+  }
+
+  .contest-request__slogan br {
+    display: none;
+  }
+
+  .contest-request__fieldset {
+    &--travel-action {
+//      flex-wrap: wrap;
+//      align-content: space-between;
+      padding: 54px 60px;
+      padding-bottom: 0;
+//      height: 250px;
+    }
+
+    &--contacts {
+//      flex-direction: row;
+//      flex-wrap: wrap;
+//      justify-content: space-between;
+      padding-top: 42px;
+    }
+
+    &--pink-version {
+      margin: 0;
+      padding: 0 74px;
+      padding-top: 50px;
+      padding-bottom: 16px;
+      width: 430px;
+    }
+
+    &--story {
+      padding: 42px 60px;
+    }
+  }
+
+  .contest-request__flex {
+    &--travel-action {
+      flex-wrap: wrap;
+      align-content: space-between;
+      height: 180px;
+    }
+
+    &--contacts {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .contest-request__fullname {
+    margin: 0;
+    margin-left: auto;
+    margin-right: 100px;
+    margin-bottom: 32px;
+    padding: 0;
+    width: 430px;
+  }
+
+  .contest-request__fullname .contest-request__text-field {
+    min-width: 60%;
+  }
+
+  .contest-request__travel-action {
+    padding-bottom: 0;
+  }
+
+  .contest-request__contacts {
+    padding-bottom: 56px;
+  }
+
+  .contest-request__contacts .contest-request__label {
+    margin-bottom: 14px;
+    padding-right: 22px;
+    width: 40%;
+  }
+
+  .contest-request__contacts .contest-request__text-field {
+    margin-bottom: 10px;
+    width: 40%;
+  }
+
+  .contest-request__contacts label[for="telephone"] {
+    order: 2;
+  }
+
+  .contest-request__contacts label[for="email"] {
+    order: 3;
+  }
+
+  .contest-request__contacts input[id=email] {
+    order: 1;
+  }
+
+  .contest-request__pink-version {
+    display: flex;
+    margin: 0;
+    margin-right: auto;
+    margin-bottom: 32px;
+    padding-top: 12px;
+    padding-bottom: 25px;
+  }
+
+  .contest-request__btns {
+    margin-bottom: 12px;
   }
 }
