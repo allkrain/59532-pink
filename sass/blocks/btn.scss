@@ -27,7 +27,11 @@
 }
 
 @media (min-width: 700px) {
-
+  .btn {
+    &--upload {
+      margin-bottom: 26px;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
@@ -46,7 +50,8 @@
     }
 
     &--upload {
-      margin-right: 42px;
+//      margin-right: 42px;
+      margin-bottom: 0;
     }
   }
 }

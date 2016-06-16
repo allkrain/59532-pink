@@ -2,6 +2,9 @@
 }
 
 .social__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -10,9 +13,9 @@
 .social__list li {
   display: inline-block;
   vertical-align: top;
-  margin-right: 8px;
+  margin-right: 12px;
 
-  &::last-child {
+  &:last-child {
     margin-right: 0;
   }
 }
@@ -39,6 +42,19 @@
 
   &--youtube {
     background-image: url(../img/icon-youtube.svg);
+  }
+}
+
+@media (min-width: 700px) {
+  .social{
+    margin-left: 74px;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 700px) {
+  .social{
+    margin: 0;
   }
 }
 

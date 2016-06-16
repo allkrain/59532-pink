@@ -345,7 +345,7 @@ input[class*="radio"]:checked + label[class*="radio"]::after {
   .contest-request {
     @include centering();
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-content: stretch;
     flex-wrap: wrap;
   }
@@ -402,9 +402,9 @@ input[class*="radio"]:checked + label[class*="radio"]::after {
   }
 
   .contest-request__fullname {
-    margin: 0;
-    margin-left: auto;
-    margin-right: 100px;
+//    margin: 0;
+//    margin-left: auto;
+//    margin-right: 100px;
     margin-bottom: 32px;
     padding: 0;
     width: 430px;
@@ -416,10 +416,12 @@ input[class*="radio"]:checked + label[class*="radio"]::after {
 
   .contest-request__travel-action {
     padding-bottom: 0;
+    width: 100%;
   }
 
   .contest-request__contacts {
     padding-bottom: 56px;
+    width: 100%;
   }
 
   .contest-request__contacts .contest-request__label {
@@ -443,6 +445,10 @@ input[class*="radio"]:checked + label[class*="radio"]::after {
 
   .contest-request__contacts input[id=email] {
     order: 1;
+  }
+
+  .contest-request__story {
+    width: 100%;
   }
 
   .contest-request__pink-version {
