@@ -6,7 +6,11 @@
     color: $menuopen-bg-color;
     image: url('../img/bg-back-mobile@1x.jpg');
     repeat: no-repeat;
-    position: 50% 100%;
+    position: 50% 0%;
+  }
+
+  @media #{$retina} {
+    background-image: url('../img/bg-back-mobile@2x.jpg');
   }
 }
 
@@ -20,60 +24,89 @@
     repeat: no-repeat;
     position: 0 100%, 50% 100%;
   }
+  @media #{$retina} {
+    background-image:
+      url('../img/iphone-hand-mobile@2x.png'),
+      url('../img/bg-back-mobile@2x.jpg');
+  }
 }
 
 .main-header h1 {
   @include font(24px, normal, 300, $white);
   @include centering();
 
-  padding: {
-    top: 20px;
-    bottom: 80px;
-  }
+  box-sizing: border-box;
+  height: 166px;
+  padding-top: 20px;
   text-align: center;
 }
 
 @media (min-width: 700px) {
   .main-header {
-    background-position: 50% 50%;
-    background-size: cover;
+    background: {
+      image: url('../../img/bg-back-tablet@1x.jpg');
+      position: 50% 0;
+    }
+
+    @media #{$retina} {
+      background-image: url('../img/bg-back-tablet@2x.jpg');
+    }
   }
 
   .main-header__main-page {
     min-height: 728px;
     background: {
-      size: 60%, auto 765px;
-      position: 70% 100%, 50% 100%;
+      image:
+        url('../img/iphone-hand-tablet@1x.png'),
+        url('../img/bg-back-tablet@1x.jpg');
+      position: 70% 100%, 50% 0%;
+    }
+
+    @media #{$retina} {
+      background-image:
+        url('../img/iphone-hand-tablet@2x.png'),
+        url('../img/bg-back-tablet@2x.jpg');
     }
   }
 
   .main-header h1 {
+    height: 330px;
     font-size: 50px;
     line-height: 60px;
-    padding: {
-      top: 70px;
-      bottom: 140px;
-    }
+    padding: 0 40px;
+    padding-top: 70px;
   }
 }
 
 @media (min-width: 1200px) {
   .main-header {
+    background: {
+      image: url('../img/bg-back-desktop@1x.jpg');
+      position: 50% 0;
+    }
   }
 
   .main-header__main-page {
     min-height: 856px;
     background: {
-      size: auto 645px, auto 1386px;
-      position: 60% 100%, 50% 50%;
+      image:
+        url('../img/iphone-hand-desktop@1x.png'),
+        url('../img/bg-back-desktop@1x.jpg');
+      position: 100% 100%, 50% 50%;
+    }
+
+    @media #{$retina} {
+      background-image:
+        url('../img/iphone-hand-desktop@2x.png'),
+        url('../img/bg-back-desktop@2x.jpg');
     }
   }
 
   .main-header h1 {
     box-sizing: border-box;
-    padding: 160px {
-      top: 70px;
-      bottom: 98px;
+    padding: 60px {
+      top: 64px;
     }
+    height: 284px;
   }
 }

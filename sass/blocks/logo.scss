@@ -4,6 +4,10 @@
   padding-bottom: 25px;
   font-size: 0;
   line-height: 0;
+
+  &--footer {
+    padding: 0;
+  }
 }
 
 .logo__image {
@@ -14,8 +18,14 @@
 @media (min-width: 700px) {
   .logo {
     padding: {
-      top: 44px;
-      bottom: 42px
+      top: 26px;
+      bottom: 42px;
+    }
+
+    &--footer {
+      margin-top: 30px;
+      margin-bottom: auto;
+      padding: 0 ;
     }
   }
 }
@@ -24,12 +34,14 @@
   .logo {
     padding: {
       top: 28px;
-      bottom: 40px
+      bottom: 40px;
+    }
+
+    &--footer {
+      padding: 0;
     }
   }
 
   .logo__image {
-    width: 150px;
-    height: 40px;
   }
 }

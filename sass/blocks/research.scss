@@ -16,7 +16,11 @@
     @include font();
 
     padding: 95px 0px;
-    padding-left: 320px;
+    padding-left: 310px;
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 240px auto;
+    background-position: 0% 50%;
   }
 
   .research__item h3 {
@@ -54,7 +58,12 @@
     @include font(18px, 30px);
 
     padding: 76px 10px;
+    padding-top: 94px;
     padding-left: 365px;
+
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 
   .research__item h3 {
