@@ -27,7 +27,18 @@
     margin-right: 0;
   }
 
-  &--checked {
+  &:hover {
+    background-color: rgba($gray-font-color, 0.6);
+  }
+
+  &:active {
+    background-color: rgba($gray-font-color, 0.1);
+  }
+
+  &--checked,
+  &--checked:hover,
+  &--checked:active
+  {
     background-color: $white;
     border: 3px solid $gray-font-color;
   }
@@ -56,6 +67,18 @@
       border-left: none;
       border-bottom: none;
       transform: translateY(-50%) rotate(45deg);
+    }
+
+    &--left,
+    &--right
+    {
+      &:hover {
+        border-color: rgba($gray-font-color, 0.6);
+      }
+
+      &:active {
+        border-color: rgba($gray-font-color, 0.1);
+      }
     }
   }
 

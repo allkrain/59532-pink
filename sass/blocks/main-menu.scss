@@ -37,6 +37,14 @@
     padding: 0;
     text-align: left;
   }
+
+  &:hover {
+    color: $pink;
+  }
+
+  &:active {
+    color: rgba($pink, 0.3);
+  }
 }
 
 .main-menu__btn {
@@ -135,6 +143,18 @@
     &::after {
       transform: rotate(-45deg);
     }
+
+    &:hover::before,
+    &:hover::after
+    {
+      background-color: $pink;
+    }
+
+    &:active::before,
+    &:active::after
+    {
+      background-color: rgba($pink, 0.3);
+    }
   }
 
   .main-menu--close .main-menu__btn {
@@ -160,6 +180,20 @@
 
     &::after {
       bottom: -8px;
+    }
+
+    &:hover,
+    &:hover::before,
+    &:hover::after
+    {
+      background-color: $pink;
+    }
+
+    &:active,
+    &:active::before,
+    &:active::after
+    {
+      background-color: rgba($pink, 0.3);
     }
   }
 }
@@ -197,6 +231,8 @@
 
   .main-menu__item {
     display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 2px;
     font-weight: normal;
     line-height: 18px;
     text-transform: none;
@@ -204,10 +240,35 @@
     box-shadow: none;
 
     &--header {
+      padding-bottom: 0;
       margin: {
+        bottom: 0;
         left: 0;
         right: 168px;
       }
+    }
+
+    &:hover {
+      margin-bottom: 0;
+      color: $white;
+      border-bottom: 2px solid $white;
+    }
+
+    &--active:hover {
+      margin-bottom: 0;
+      color: $pink;
+      border-bottom: 2px solid $pink;
+    }
+
+    &:active,
+    &--active:active {
+      margin-bottom: 2px;
+      color: rgba($white, 0.3);
+      border-bottom: none;
+    }
+
+    &--header:hover {
+      border-bottom: none;
     }
   }
 

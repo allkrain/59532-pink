@@ -32,6 +32,14 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
+  &:hover {
+    border-color: $gray-font-color;
+  }
+
+  &:active {
+    border-color: rgba($gray-font-color, 0.1);
+  }
+
   &--twitter {
     background-image: url(../img/icon-twitter.svg);
   }

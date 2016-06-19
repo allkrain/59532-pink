@@ -39,6 +39,18 @@
   @include font(24px, 30px, 300, $pink);
 
   text-decoration: none;
+
+  &--mail {
+    &:hover{
+      color: $gray-font-color;
+      text-decoration: underline;
+    }
+
+    &:active{
+      color: rgba($gray-font-color, 0.3);
+      text-decoration: none;
+    }
+  }
 }
 
 .contacts__map {
