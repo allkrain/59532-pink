@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Пинк</title>
+    <script src="js/picturefill.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-menu main-menu--nojs">
+      <nav class="main-menu main-menu">
         <div class="main-menu__wrapper">
           <div class="main-menu__item main-menu__item--header">
             <div class="main-menu__wrapper-header">
               <a class="logo" href="index.html">
-                <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="" width="75" height="23">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                  <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="">
+                </picture>
                 Pink
               </a>
               <button class="main-menu__btn" type="button">Меню</button>
@@ -40,7 +48,7 @@
     <main>
       <form class="contest-request" action="https://echo.htmlacademy.ru" method="post">
         <p class="contest-request__slogan">
-          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <br/>Пожалуйста заполните форму ниже:
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="contest-request__please">Пожалуйста заполните форму ниже:</span>
         </p>
         <div class="contest-request__fullname">
           <label class="contest-request__label contest-request__label--text" for="lastname">Фамилия:</label>
@@ -73,7 +81,7 @@
         </div>
         <div class="contest-request__contacts">
           <fieldset class="contest-request__fieldset contest-request__fieldset--contacts">
-            <legend class="contest-request__title">Контактные данные</legend>
+            <legend class="contest-request__title">Контактная информация</legend>
             <div class="contest-request__flex contest-request__flex--contacts">
               <label class="contest-request__label contest-request__label--text" for="telephone">Номер телефона</label>
               <input class="contest-request__text-field" id="telephone" type="tel" name="telephone" placeholder="+7 XXX XXX-XX-XX">
@@ -101,20 +109,23 @@
           <fieldset class="contest-request__fieldset contest-request__fieldset--story">
             <legend class="contest-request__title">Опишите свои эмоции</legend>
             <div class="contest-request__flex contest-request__flex--story">
-              <textarea class="contest-request__text-field" id="story" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="6"></textarea>
+              <textarea class="contest-request__text-field contest-request__text-field--story" id="story" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
           </fieldset>
         </div>
         <div class="contest-request__btns">
           <input class="contest-request__btn" type="submit" name="request" value="Отправить форму">
-          <span class="contest-request__note"><span class="contest-request__star">*</span> - Обязательные поля</span>
+          <span class="contest-request__note"><span class="contest-request__star">*</span> &mdash; Обязательные поля</span>
         </div>
       </form>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <a class="main-footer__item logo" href="index.html">
-          <img class="logo__image" src="img/logo-pink-blue-mobile.svg" alt="" width="147" height="41">
+        <a class="main-footer__item logo logo--footer" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+            <img class="logo__image" src="img/logo-pink-blue-mobile.svg" alt="">
+          </picture>
           Pink
         </a>
         <div class="main-footer__item social">
@@ -125,7 +136,7 @@
           </ul>
         </div>
         <div class="main-footer__item copyright">
-          <span>Раработано</span>
+          <span>Разработано</span>
           <a class="copyright__link" href="https://htmlacademy.ru">
             <img src="img/logo-htmlacademy.svg" alt="htmlacademy" width="27" height="35">
           </a>

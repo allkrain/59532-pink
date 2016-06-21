@@ -39,6 +39,18 @@
   @include font(24px, 30px, 300, $pink);
 
   text-decoration: none;
+
+  &--mail {
+    &:hover{
+      color: $gray-font-color;
+      text-decoration: underline;
+    }
+
+    &:active{
+      color: rgba($gray-font-color, 0.3);
+      text-decoration: none;
+    }
+  }
 }
 
 .contacts__map {
@@ -51,6 +63,10 @@
 }
 
 @media (min-width: 700px) {
+  .contacts {
+    margin-bottom: 6px;
+  }
+
   .contacts__information {
     padding-top: 44px;
     padding-bottom: 26px;
@@ -82,12 +98,18 @@
 
   .contacts__map {
     height: 374px;
+    background-image:
+      url('../img/icon-map-marker.svg'),
+      url('../img/bg-map-tablet@1x.png');
     background-position: 50% 50%, 50% 100%;
-    background-size: auto, cover;
   }
 }
 
 @media (min-width: 1200px) {
+  .contacts {
+    margin-bottom: 40px;
+  }
+
   .contacts__information {
     padding-top: 76px;
     padding-bottom: 16px;
@@ -128,6 +150,9 @@
 
   .contacts__map {
     height: 500px;
+    background-image:
+      url('../img/icon-map-marker.svg'),
+      url('../img/bg-map-desktop@1x.png');
     background-position: 50% 50%, 50% 100%;
     background-size: auto, cover;
   }

@@ -9,25 +9,66 @@
   border-radius: 28px;
   background-color: transparent;
 
+  &:hover,
+  &:active
+  {
+    outline: none;
+  }
+
   &--download {
     color: $white;
     border-color: $white;
+
+    &:hover {
+      color: $pink;
+      background-color: $white;
+    }
+
+    &:active {
+      color: rgba($pink, 0.3);
+      background-color: $white;
+    }
   }
 
   &--upload {
     width: 100%;
     margin-bottom: 12px;
+
+    &:hover {
+      color: $white;
+      background-color: $pink;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+      background-color: $pink;
+    }
   }
 
   &--chancel {
     width: 100%;
     color: rgba($gray-font-color, 0.1);
     border-color: rgba($gray-font-color, 0.1);
+
+    &:hover {
+      color: rgba($gray-font-color, 0.3);
+      border-color: rgba($gray-font-color, 0.3);
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+      border-color: rgba($gray-font-color, 0);
+      background-color: rgba($gray-font-color, 0.3);
+    }
   }
 }
 
 @media (min-width: 700px) {
-
+  .btn {
+    &--upload {
+      margin-bottom: 26px;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
@@ -46,7 +87,8 @@
     }
 
     &--upload {
-      margin-right: 42px;
+//      margin-right: 42px;
+      margin-bottom: 0;
     }
   }
 }

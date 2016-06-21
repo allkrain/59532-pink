@@ -26,8 +26,6 @@
 }
 
 .gallery__item {
-
-//  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -90,22 +88,10 @@
     align-content: stretch;
   }
 
-  .gallery__list li {
-//    display: inline-block;
-//    margin-right: 16px;
-//    width: 300px;
-//    vertical-align: top;
-//
-//    &:nth-child(even) {
-//      margin-right: 0;
-//    }
-  }
-
   .gallery__item {
     display: inline-block;
     display: flex;
     flex-direction: column;
-//    margin-right: 16px;
     width: 300px;
     vertical-align: top;
 

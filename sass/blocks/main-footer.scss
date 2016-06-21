@@ -9,11 +9,14 @@
 
 .main-footer__wrapper {
   @include centering();
+
+  display: flex;
+  flex-direction: column;
 }
 
 .main-footer__item {
   display: block;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
   padding: 0;
   text-align: center;
 
@@ -41,7 +44,7 @@
 
   .main-footer__item {
     display: inline-block;
-//    margin-right: 70px;
+//    margin-right: 50px;
     margin-bottom: 0;
     padding: 36px 0;
     vertical-align: top;

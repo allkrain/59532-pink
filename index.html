@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Пинк</title>
+    <script src="js/picturefill.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
   </head>
   <body>
     <header class="main-header main-header__main-page">
-      <nav class="main-menu main-menu--nojs">
+      <nav class="main-menu main-menu">
           <div class="main-menu__wrapper">
             <div class="main-menu__item main-menu__item--header">
               <div class="main-menu__wrapper-header">
                 <a class="logo">
-                  <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="" width="75" height="23">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                    <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+                    <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="">
+                  </picture>
                   Pink
                 </a>
                 <button class="main-menu__btn" type="button">Меню</button>
@@ -221,7 +229,7 @@
           </p>
           <p class="contacts__item contacts__item--email">
             <b>Пишите:</b>
-            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p class="contacts__item contacts__item--adress">
             <b>Приезжайте в гости:</b>
@@ -233,8 +241,11 @@
     </main>
     <footer class="main-footer main-footer__main-page">
       <div class="main-footer__wrapper">
-        <a class="main-footer__item logo" href="index.html">
-          <img class="logo__image" src="img/logo-pink-blue-mobile.svg" alt="" width="147" height="41">
+        <a class="main-footer__item logo logo--footer" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+            <img class="logo__image" src="img/logo-pink-blue-mobile.svg" alt="">
+          </picture>
           Pink
         </a>
         <div class="main-footer__item social">

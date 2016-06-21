@@ -31,20 +31,21 @@
     margin-top: -619px;
     margin-bottom: 40px;
     padding: 64px 0;
+    padding-top: 94px;
     background-color: transparent;
     z-index: 10;
   }
   .download-block__wrapper {
     width: 300px;
-    margin-left: 8px;
+    margin-left: 0;
   }
 
   .download-block h2 {
-    @include font(40px, normal, 300, $white);
+    @include font(40px, 50px, 300, $white);
 
     display: block;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     padding: 0 50px;
   }
 
@@ -59,10 +60,6 @@
     padding: 112px 0;
     margin-top: -745px;
     margin-bottom: 0;
-  }
-
-  .download-block__wrapper {
-    margin-left: 0;
   }
 
   .download-block h2 {

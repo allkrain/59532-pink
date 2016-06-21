@@ -9,17 +9,22 @@
   @include centering();
 
   padding: 0 10px;
-  padding-top: 22px;
-  padding-bottom: 40px;
+  padding-top: 18px;
+  padding-bottom: 42px;
 }
 
 .upload-block__form {
   background-color: $stripe-bg-color;
 }
 
+.upload-block__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .upload-block__promo {
   padding-top: 20px;
-  padding-bottom: 42px;
+  padding-bottom: 38px;
   line-height: 0;
 }
 
@@ -43,26 +48,42 @@
 
 
 @media (min-width: 700px) {
+  .upload-block {
+    margin-bottom: 6px;
+  }
+
   .upload-block__form {
     padding-top: 58px;
     padding-bottom: 52px;
+  }
+
+  .upload-block__slogan {
+    font-size: 18px;
+    padding-top: 46px;
+    padding-bottom: 68px;
   }
 
   .upload-block__wrapper {
     @include centering();
     @include clearfix();
 
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
     box-sizing: border-box;
+    height: 401px;
   }
 
   .upload-block__promo {
     float: left;
     padding: 0;
+    width: 300px;
   }
 
   .upload-block__promo img {
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    height: auto;
   }
 
   .upload-block__filters,
@@ -72,18 +93,46 @@
     float: right;
     clear: right;
   }
+
+  .upload-block__filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    margin-bottom: auto;
+  }
+
+  .upload-block__btns {
+    box-sizing: border-box;
+    padding: 0;
+    padding-right: 12px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .upload-block {
+    margin-bottom: 70px;
+  }
+
+  .upload-block__slogan {
+    padding-top: 0;
+  }
+
   .upload-block__wrapper {
     padding-left: 80px;
     padding-right: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
   .upload-block__filters,
   .upload-block__btns
   {
     width: 410px;
+  }
+
+  .upload-block__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
