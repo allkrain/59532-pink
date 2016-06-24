@@ -1,73 +1,52 @@
 .upload-block {
-  @include font(14px, 30px);
-
   min-width: 320px;
+  line-height: 30px;
   text-align: center;
+
+  @media #{$tablet} {
+    margin-bottom: 6px;
+  }
+
+  @media #{$desktop} {
+    margin-bottom: 70px;
+  }
 }
 
 .upload-block__slogan {
-  @include centering();
+  @include centering;
 
   padding: 0 10px;
   padding-top: 18px;
   padding-bottom: 42px;
+
+  @media #{$tablet} {
+    padding-top: 46px;
+    padding-bottom: 68px;
+    font-size: 18px;
+  }
+
+  @media #{$desktop} {
+    padding-top: 0;
+  }
 }
 
 .upload-block__form {
   background-color: $stripe-bg-color;
+
+  @media #{$tablet} {
+    padding-top: 58px;
+    padding-bottom: 52px;
+  }
 }
 
 .upload-block__wrapper {
   display: flex;
   flex-direction: column;
-}
 
-.upload-block__promo {
-  padding-top: 20px;
-  padding-bottom: 38px;
-  line-height: 0;
-}
+  @media #{$tablet} {
+    @include centering;
+    @include clearfix;
 
-.upload-block__promo img {
-  width: 280px;
-  height: 375px;
-}
-
-.upload-block__btns {
-  padding-top: 37px;
-  padding-bottom: 40px;
-}
-
-@media (max-width: 699px) {
-  .upload-block__promo,
-  .upload-block__btns
-  {
-    @include centering();
-  }
-}
-
-
-@media (min-width: 700px) {
-  .upload-block {
-    margin-bottom: 6px;
-  }
-
-  .upload-block__form {
-    padding-top: 58px;
-    padding-bottom: 52px;
-  }
-
-  .upload-block__slogan {
-    font-size: 18px;
-    padding-top: 46px;
-    padding-bottom: 68px;
-  }
-
-  .upload-block__wrapper {
-    @include centering();
-    @include clearfix();
-
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
@@ -75,64 +54,77 @@
     height: 401px;
   }
 
-  .upload-block__promo {
+  @media #{$desktop} {
+    padding-left: 80px;
+    padding-right: 60px;
+    padding-bottom: 0;
+  }
+}
+
+.upload-block__promo {
+  padding-top: 20px;
+  padding-bottom: 38px;
+  line-height: 0;
+
+  @media #{$only-mobile} {
+    @include centering;
+  }
+
+  @media #{$tablet} {
     float: left;
     padding: 0;
     width: 300px;
   }
 
-  .upload-block__promo img {
-    width: 100%;
-    height: auto;
-  }
+  img {
+    width: 280px;
+    height: 375px;
 
-  .upload-block__filters,
-  .upload-block__btns
-  {
-    width: 274px;
+    @media #{$tablet} {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.upload-block__filters {
+  @media #{$tablet} {
     float: right;
-    clear: right;
-  }
-
-  .upload-block__filters {
+//    clear: right;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-self: flex-start;
     margin-bottom: auto;
+    width: 274px;
   }
 
-  .upload-block__btns {
-    box-sizing: border-box;
-    padding: 0;
-    padding-right: 12px;
+  @media #{$desktop} {
+    width: 410px;
   }
 }
 
-@media (min-width: 1200px) {
-  .upload-block {
-    margin-bottom: 70px;
+.upload-block__btns {
+  padding-top: 37px;
+  padding-bottom: 40px;
+
+  @media #{$only-mobile} {
+    @include centering;
   }
 
-  .upload-block__slogan {
-    padding-top: 0;
+  @media #{$tablet} {
+    float: right;
+//    clear: right;
+    box-sizing: border-box;
+    padding: 0;
+    padding-right: 12px;
+    width: 274px;
   }
 
-  .upload-block__wrapper {
-    padding-left: 80px;
-    padding-right: 60px;
-    padding-bottom: 0;
-  }
-
-  .upload-block__filters,
-  .upload-block__btns
-  {
-    width: 410px;
-  }
-
-  .upload-block__btns {
+  @media #{$desktop} {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 410px;
   }
 }

@@ -2,17 +2,22 @@
   position: relative;
 }
 
-.slider__inputs {
+.slider__input {
   display: none;
 }
 
 .slider__toggles {
   text-align: center;
+
+  @media #{$desktop} {
+    display: none;
+  }
 }
 
 .slider__toggle {
-  display: inline-block;
-  margin-right: 6px;
+  @include inline-block;
+
+  margin-right: 10px;
   width: 6px;
   height: 6px;
   font-size: 0;
@@ -35,38 +40,36 @@
     background-color: rgba($gray-font-color, 0.1);
   }
 
-  &--checked,
-  &--checked:hover,
-  &--checked:active
+  .slider__input:checked + &,
+  .slider__input:checked + &:hover,
+  .slider__input:checked + &:active
   {
     background-color: $white;
-    border: 3px solid $gray-font-color;
+    border-color: $gray-font-color;
   }
 }
 
-@media (min-width: 1200px) {
-  .slider__arrow {
+.slider__arrow {
+  @media #{$desktop} {
     position: absolute;
+    top: 63%;
     display: block;
     width: 27px;
     height: 27px;
     border: 2px solid rgba($gray-font-color, 0.3);
+    transform: translateY(-50%) rotate(45deg);
     cursor: pointer;
 
     &--left {
-      top: 50%;
-      left: 0;
+      left: 4px;
       border-top: none;
       border-right: none;
-      transform: translateY(-50%) rotate(45deg);
     }
 
     &--right {
-      top: 50%;
-      right: 0;
+      right: 4px;
       border-left: none;
       border-bottom: none;
-      transform: translateY(-50%) rotate(45deg);
     }
 
     &--left,
@@ -81,8 +84,5 @@
       }
     }
   }
-
-  .slider__toggles {
-    display: none;
-  }
 }
+

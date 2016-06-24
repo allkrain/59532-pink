@@ -1,4 +1,12 @@
 .social {
+  @media #{$tablet} {
+    margin-left: 74px;
+    margin-right: auto;
+  }
+
+  @media #{$desktop} {
+    margin: 0;
+  }
 }
 
 .social__list {
@@ -37,7 +45,8 @@
   }
 
   &:active {
-    border-color: rgba($gray-font-color, 0.1);
+    opacity: 0.3;
+    border-color: rgba($gray-font-color, 0.4);
   }
 
   &--twitter {
@@ -52,17 +61,3 @@
     background-image: url(../img/icon-youtube.svg);
   }
 }
-
-@media (min-width: 700px) {
-  .social{
-    margin-left: 74px;
-    margin-right: auto;
-  }
-}
-
-@media (min-width: 700px) {
-  .social{
-    margin: 0;
-  }
-}
-

@@ -1,61 +1,47 @@
 .download-links {
-  margin: {
-    top: 30px;
-    bottom: 20px;
-  }
+  margin-top: 34px;
+  margin-bottom: 20px;
   padding: 0;
   list-style: none;
-}
 
-.download-links li {
-  display: inline-block;
-  vertical-align: top;
+  @media #{$tablet} {
+    margin-top: 46px;
+    margin-bottom: 36px;
+  }
+
+  @media #{$desktop} {
+    margin-top: 67px;
+    margin-bottom: 56px;
+  }
+
+  li {
+    @include inline-block;
+  }
 }
 
 .download-links__item {
-  @include font(0);
+  @include inline-block;
 
-  display: inline-block;
   margin-right: 30px;
   width: 47px;
   height: 57px;
+  font-size: 0;
   color: inherit;
+  background-repeat: no-repeat;
 
   &--apple {
     background-image: url('../img/logo-apple.svg');
-    background-repeat: no-repeat;
     background-position: 0 0;
   }
 
   &--android {
     background-image: url('../img/logo-android.svg');
-    background-repeat: no-repeat;
-    background-position: 0 9px;
+    background-position: 4px 8px;
   }
 
   &--windows {
     margin-right: 0;
     background-image: url('../img/logo-microsoft.svg');
-    background-repeat: no-repeat;
     background-position: 0 11px;
-  }
-}
-
-
-@media (min-width: 700px) {
-  .download-links {
-    margin: {
-      top: 45px;
-      bottom: 40px;
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  .download-links {
-    margin: {
-      top: 65px;
-      bottom: 60px;
-    }
   }
 }

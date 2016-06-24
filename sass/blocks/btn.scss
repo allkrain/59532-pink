@@ -1,8 +1,10 @@
 .btn {
-  @include font(18px, 18px, bold, $pink);
-
   display: block;
-  padding: 15px 20px;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  color: $pink;
   text-decoration: none;
   text-align: center;
   border: 3px solid $pink;
@@ -19,6 +21,10 @@
     color: $white;
     border-color: $white;
 
+    @media #{$desktop} {
+      font-size: 21px;
+    }
+
     &:hover {
       color: $pink;
       background-color: $white;
@@ -33,6 +39,17 @@
   &--upload {
     width: 100%;
     margin-bottom: 12px;
+
+    @media #{$tablet} {
+      margin-bottom: 26px;
+    }
+
+    @media #{$desktop} {
+      @include inline-block;
+
+      margin-bottom: 0;
+      width: 180px;
+    }
 
     &:hover {
       color: $white;
@@ -50,6 +67,12 @@
     color: rgba($gray-font-color, 0.1);
     border-color: rgba($gray-font-color, 0.1);
 
+    @media #{$desktop} {
+      @include inline-block;
+
+      width: 180px;
+    }
+
     &:hover {
       color: rgba($gray-font-color, 0.3);
       border-color: rgba($gray-font-color, 0.3);
@@ -59,36 +82,6 @@
       color: rgba($white, 0.3);
       border-color: rgba($gray-font-color, 0);
       background-color: rgba($gray-font-color, 0.3);
-    }
-  }
-}
-
-@media (min-width: 700px) {
-  .btn {
-    &--upload {
-      margin-bottom: 26px;
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  .btn {
-
-    &--download {
-      font-size: 21px;
-    }
-
-    &--upload,
-    &--chancel
-    {
-      width: 180px;
-      display: inline-block;
-      vertical-align: top;
-    }
-
-    &--upload {
-//      margin-right: 42px;
-      margin-bottom: 0;
     }
   }
 }

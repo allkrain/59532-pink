@@ -31,7 +31,12 @@
   width: 87.5%;
 
   @media (min-width: 700px) {
-    width: 88.6%;
+    width: 88.7%;
     max-width: 940px;
   }
+}
+
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: top;
 }
