@@ -67,8 +67,6 @@
 }
 
 .review__author-name {
-  @include font(18px, 30px, bold, $black);
-
   margin: 0;
   margin-bottom: 12px;
   font-size: 18px;

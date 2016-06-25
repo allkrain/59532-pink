@@ -514,11 +514,12 @@
 }
 
 .contest-request__note {
-  @include font($lheight: 30px);
-
   display: block;
   align-self: center;
   padding-bottom: 12px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
   text-transform: uppercase;
 
   @media #{$tablet} {

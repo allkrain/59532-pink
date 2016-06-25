@@ -19,8 +19,7 @@
 }
 
 .social__list li {
-  display: inline-block;
-  vertical-align: top;
+  @include inline-block;
   margin-right: 12px;
 
   &:last-child {
@@ -29,12 +28,10 @@
 }
 
 .social__item {
-  @include font(0);
-
-  display: inline-block;
-  vertical-align: top;
+  @include inline-block;
   width: 45px;
   height: 45px;
+  font-size: 0;
   border-radius: 50%;
   border: 3px solid rgba($gray-font-color, 0.1);
   background-repeat: no-repeat;

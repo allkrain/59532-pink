@@ -1,13 +1,3 @@
-@mixin font($fsize: 14px, $lheight: 24px, $fweight: normal, $fcolor: $gray-font-color) {
-  font: {
-    family: $font-stack;
-    size: $fsize;
-    weight: $fweight;
-  }
-  line-height: $lheight;
-  color: $fcolor;
-}
-
 @mixin clearfix() {
   &::after{
     content: '';
