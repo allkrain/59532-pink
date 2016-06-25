@@ -32,7 +32,7 @@
   @media #{$desktop} {
     padding-left: 38px;
     padding-right: 38px;
-    padding-bottom: 52px;
+    padding-bottom: 58px;
   }
 }
 
@@ -51,6 +51,7 @@
 .contest-request__fieldset {
   @include centering;
 
+  position: relative;
   box-sizing: border-box;
   padding: 0;
   border: none;
@@ -65,16 +66,16 @@
   }
 
   &--travel-action {
-    padding-top: 40px;
+    padding-top: 58px;
 
     @media #{$tablet} {
-      padding-top: 44px;
-      padding-bottom: 6px;
+      padding-top: 52px;
+      padding-bottom: 4px;
     }
 
     @media #{$desktop} {
       margin: 0;
-      padding: 44px 58px;
+      padding: 50px 58px;
       padding-right: 50px;
       padding-bottom: 0;
     }
@@ -82,43 +83,43 @@
 
   &--contacts {
     @media #{$tablet} {
-      padding-top: 38px;
-      padding-bottom: 2px;
+      padding-top: 46px;
+      padding-bottom: 0px;
     }
 
     @media #{$desktop} {
       margin: 0;
-      padding-top: 34px;
+      padding-top: 42px;
     }
   }
 
   &--pink-version {
-    padding-top: 36px;
+    padding-top: 52px;
 
     @media #{$tablet} {
-      padding: 44px 57px;
+      padding: 52px 57px;
       padding-bottom: 18px;
     }
 
     @media #{$desktop} {
       margin: 0;
       padding: 0 71px;
-      padding-top: 34px;
+      padding-top: 54px;
       padding-bottom: 16px;
     }
   }
 
   &--story {
-    padding-top: 18px;
+    padding-top: 26px;
 
     @media #{$tablet} {
-      padding-top: 38px;
-      padding-bottom: 34px;
+      padding-top: 44px;
+      padding-bottom: 36px;
     }
 
     @media #{$desktop} {
       margin: auto;
-      padding: 34px 58px;
+      padding: 42px 58px;
       padding-bottom: 28px;
     }
   }
@@ -144,14 +145,23 @@
 }
 
 .contest-request__title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  box-sizing: border-box;
   padding: 0 24px;
+  min-width: 280px;
   line-height: 18px;
   color: $pink;
   text-align: center;
   text-transform: uppercase;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
 
   @media #{$tablet} {
-    margin-bottom: 0;
+    padding: 0;
+    min-width: 360px;
+    background-color: $white;
   }
 }
 
@@ -163,6 +173,7 @@
   &--text {
     margin-bottom: 6px;
     padding-left: 22px;
+    font-size: 14px;
     line-height: 30px;
     color: $pink;
     text-transform: uppercase;
@@ -250,6 +261,7 @@
   border: 2px solid $table-border-color;
 
   &:hover {
+    outline: none;
     border-color: $gray-font-color;
   }
 
@@ -279,7 +291,7 @@
 
     @media #{$desktop} {
       min-width: 60%;
-      margin: 31px 0;
+      margin: 29px 0;
       margin-bottom: 24px;
     }
   }
@@ -288,7 +300,7 @@
     @media #{$desktop} {
       box-sizing: border-box;
       margin-bottom: 10px;
-      width: 45.6%;
+      width: 45.8%;
     }
   }
 }
@@ -334,13 +346,13 @@
 }
 
 .contest-request__travel-action {
-  padding-top: 28px;
+  padding-top: 48px;
   padding-bottom: 5px;
   background-color: $stripe-bg-color;
 
   @media #{$tablet} {
     order: 3;
-    padding-top: 0;
+    padding-top: 12px;
     background-color: $white;
   }
 
@@ -358,12 +370,11 @@
 
   @media #{$tablet} {
     order: 2;
-    padding-top: 0;
+    padding-top: 8px;
     padding-bottom: 54px;
   }
 
   @media #{$desktop} {
-    padding-bottom: 56px;
     width: 100%;
   }
 
@@ -379,6 +390,7 @@
     @media #{$tablet} {
       padding-right: 60px;
       margin-bottom: 10px;
+
     }
 
     &[id="email"] {
@@ -444,11 +456,11 @@
 }
 
 .contest-request__pink-version {
-  padding-top: 30px;
+  padding-top: 50px;
   background-color: $stripe-bg-color;
 
   @media #{$tablet} {
-    padding-top: 28px;
+    padding-top: 36px;
     padding-bottom: 60px;
     order: 1;
     background-color: $white;
@@ -459,24 +471,24 @@
     margin: 0;
     margin-right: 0;
     margin-bottom: 32px;
-    padding-top: 12px;
+    padding-top: 18px;
     padding-bottom: 25px;
     width: 46.2%;
   }
 }
 
 .contest-request__story {
-  padding-top: 60px;
+  padding-top: 70px;
   padding-bottom: 28px;
 
   @media #{$tablet} {
     order: 4;
-    padding-top: 52px;
+    padding-top: 60px;
     padding-bottom: 66px;
   }
 
   @media #{$desktop} {
-    padding-top: 56px;
+    padding-top: 66px;
     padding-bottom: 64px;
     width: 100%;
   }
@@ -519,18 +531,16 @@
 }
 
 .contest-request__btn {
-  @include font(18px, 30px, bold, $white);
-
   margin-bottom: 34px;
-  padding: 18px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-  color: $white;
-  text-transform: uppercase;
-  text-align: center;
-  border: none;
-  background-color: $green-btn-bg-color;
+//  padding: 18px 20px;
+//  font-size: 18px;
+//  font-weight: bold;
+//  line-height: 30px;
+//  color: $white;
+//  text-transform: uppercase;
+//  text-align: center;
+//  border: none;
+//  background-color: $green-btn-bg-color;
 
   @media #{$tablet} {
     margin-right: auto;
@@ -538,22 +548,22 @@
     width: 300px;
   }
 
-  &:hover {
-    background-color: #1c9b5e;
-  }
-
-  &:active {
-    color: rgba($white, 0.3);
-    background-color: #1c9b5e;
-  }
-
-  &:disabled,
-  &--disabled,
-  &--disabled:hover,
-  &--disabled:active
-  {
-    background-color: $table-border-color;
-  }
+//  &:hover {
+//    background-color: #1c9b5e;
+//  }
+//
+//  &:active {
+//    color: rgba($white, 0.3);
+//    background-color: #1c9b5e;
+//  }
+//
+//  &:disabled,
+//  &--disabled,
+//  &--disabled:hover,
+//  &--disabled:active
+//  {
+//    background-color: $table-border-color;
+//  }
 }
 
 input[class*="checkbox"]:checked + label[class*="checkbox"]::after {

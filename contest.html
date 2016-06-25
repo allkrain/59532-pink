@@ -293,8 +293,24 @@
           </fieldset>
         </div>
         <div class="contest-request__btns">
-          <input class="contest-request__btn" type="submit" name="request" value="Отправить форму">
+          <input class="contest-request__btn btn btn--green" type="submit" name="request" value="Отправить форму">
           <span class="contest-request__note"><span class="contest-request__star">*</span> &mdash; Обязательные поля</span>
+        </div>
+        <div class="popup">
+          <div class="popup__message popup__message--failure">
+            <h2 class="popup__title">Что-то пошло не так!</h2>
+            <div class="popup__content">
+              <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            </div>
+            <button class="popup__btn btn btn--green" type="button">ok</button>
+          </div>
+          <div class="popup__message popup__message--success">
+            <h2 class="popup__title">Ваша заявка отправлена</h2>
+            <div class="popup__content">
+              <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+            </div>
+            <button class="popup__btn btn btn--green" type="button">Закрыть окно</button>
+          </div>
         </div>
       </form>
     </main>

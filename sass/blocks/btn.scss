@@ -84,4 +84,34 @@
       background-color: rgba($gray-font-color, 0.3);
     }
   }
+
+  &--green {
+    padding: 18px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    background-color: $green-btn-bg-color;
+
+    &:hover {
+      background-color: #1c9b5e;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+      background-color: #1c9b5e;
+    }
+
+    &:disabled,
+    &--disabled,
+    &--disabled:hover,
+    &--disabled:active
+    {
+      background-color: $table-border-color;
+    }
+  }
 }
