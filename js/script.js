@@ -1,3 +1,4 @@
+'use strict';
 //меню
 
 var navMain = document.querySelector('.main-menu');
@@ -6,7 +7,7 @@ var navBtn = document.querySelector('.main-menu__btn');
 navMain.classList.remove('main-menu--nojs');
 navMain.classList.add('main-menu--close');
 
-navBtn.addEventListener('click', function() {
+navBtn.addEventListener('click', function () {
   if (navMain.classList.contains('main-menu--close')) {
     navMain.classList.remove('main-menu--close');
     navMain.classList.add('main-menu--open');
@@ -19,22 +20,21 @@ navBtn.addEventListener('click', function() {
 //карта
 
 ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [59.9387, 30.3236],
-            zoom: 16
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-        myPlacemark = new ymaps.Placemark([59.938600, 30.322629], {
-            hintContent: 'Pink',
-            balloonContent: 'Pink'
-        }, {
-            iconLayout: 'default#image',
-            iconImageHref: '../../img/icon-map-marker.svg',
-            iconImageSize: [36, 46],
-        });
-
-    myMap.geoObjects.add(myPlacemark);
+  var myMap = new ymaps.Map('map', {
+      center: [59.9387, 30.3236],
+      zoom: 16
+    }, {
+      searchControlProvider: 'yandex#search'
+    }),
+    myPlacemark = new ymaps.Placemark([59.938600, 30.322629], {
+      hintContent: 'Pink',
+      balloonContent: 'Pink'
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '../../img/icon-map-marker.svg',
+      iconImageSize: [36, 46]
+    });
+  myMap.geoObjects.add(myPlacemark);
 });
 
 //валидатор формы
@@ -45,13 +45,13 @@ var popupSuccess = document.querySelector('.popup__message--success');
 var closeFailure = document.querySelector('.popup__btn--failure');
 var closeSuccess = document.querySelector('.popup__btn--success');
 var lastname = document.querySelector('#lastname');
-var name = document.querySelector('#name');
+var firstname = document.querySelector('#name');
 var telephone = document.querySelector('#telephone');
 var email = document.querySelector('#email');
 var message = document.querySelector('#story');
 
-contestRequest.addEventListener('submit', function(event) {
-  if(!lastname.value || !name.value || !telephone.value || !email.value || !message.value) {
+contestRequest.addEventListener('submit', function (event) {
+  if (!lastname.value || !firstname.value || !telephone.value || !email.value || !message.value) {
     event.preventDefault();
     popupFailure.classList.add('popup__message--on');
   } else {
@@ -59,12 +59,12 @@ contestRequest.addEventListener('submit', function(event) {
   }
 });
 
-closeFailure.addEventListener('click', function(event){
+closeFailure.addEventListener('click', function (event) {
   event.preventDefault();
   popupFailure.classList.remove('popup__message--on');
 });
 
-closeSuccess.addEventListener('click', function(event){
+closeSuccess.addEventListener('click', function (event) {
   event.preventDefault();
-  popupFailure.classList.remove('popup__message--on');
+  popupSuccess.classList.remove('popup__message--on');
 });
