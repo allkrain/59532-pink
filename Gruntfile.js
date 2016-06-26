@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     sass: {
       style: {
         files: {
-          "css/style.css": "sass/style.scss"
+          "build/css/style.css": "sass/style.scss"
         }
       }
     },
@@ -22,23 +22,98 @@ module.exports = function(grunt) {
               "last 2 Firefox versions",
               "last 2 Opera versions",
               "last 2 Edge versions"
-            ]})
+            ]}),
+            require("css-mqpacker")({
+              sort: true
+            })
           ]
         },
-        src: "css/*.css"
+        src: "build/css/*.css"
       }
+    },
+
+    csso: {
+      style: {
+        options: {
+          report: "gzip"
+        },
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3,
+          progressive: true
+        },
+        files: [{
+          expand: true,
+          src: ["build/img/**/*.{png,jpg,gif}"]
+        }]
+      }
+    },
+
+    svgstore: {
+      options: {
+        svg: {
+          style: "display: none"
+        }
+      },
+      symbols: {
+        files: {
+          "build/img/symbols.svg": ["build/img/icons/*.svg"]
+        }
+      }
+    },
+
+    svgmin: {
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["build/img/icons/*.svg"]
+        }]
+      }
+    },
+
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          src: [
+            "fonts/**/*.{woff,woff2}",
+            "img/**",
+            "js/**",
+            "*.html"
+          ],
+          dest: "build"
+        }]
+      },
+      html: {
+        files: [{
+          expand: true,
+          src: ["*.html"],
+          dest: "build"
+        }]
+      }
+    },
+
+    clean: {
+      build: ["build"]
     },
 
     browserSync: {
       server: {
         bsFiles: {
           src: [
-            "*.html",
-            "css/*.css"
+            "build/*.html",
+            "build/css/*.css"
           ]
         },
         options: {
-          server: ".",
+          server: "build",
           watchTask: true,
           notify: false,
           open: true,
@@ -48,9 +123,13 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      html: {
+        files: ["*.html"],
+        tasks: ["copy:html"]
+      },
       style: {
         files: ["sass/**/*.{scss,sass}"],
-        tasks: ["sass", "postcss"],
+        tasks: ["sass", "postcss", "csso"],
         options: {
           spawn: false
         }
@@ -58,5 +137,15 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
   grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("build", [
+    "clean",
+    "copy",
+    "less",
+    "postcss",
+    "csso",
+    "symbols",
+    "imagemin"
+  ]);
 };
