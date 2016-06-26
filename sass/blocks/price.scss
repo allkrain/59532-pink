@@ -18,7 +18,7 @@
   overflow-x: hidden;
 
   @media #{$tablet} {
-    overflow-x: none;
+    overflow-x: visible;
   }
 }
 

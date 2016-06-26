@@ -43,7 +43,7 @@
   }
 
   @media #{$tablet} {
-    @inlude inline-block;
+    @include inline-block;
 
     flex-direction: column;
     justify-content: space-between;
@@ -52,7 +52,6 @@
 
 .filters__label-item {
   @include inline-block;
-//  margin-right: 20px;
   width: 48px;
   height: 48px;
   background-repeat: no-repeat;
@@ -153,7 +152,7 @@
   }
 
   @media #{$tablet} {
-    @inlude inline-block;
+    @include inline-block;
 
     display: flex;
     flex-direction: column;

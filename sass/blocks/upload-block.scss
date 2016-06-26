@@ -91,7 +91,6 @@
 .upload-block__filters {
   @media #{$tablet} {
     float: right;
-//    clear: right;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -115,7 +114,6 @@
 
   @media #{$tablet} {
     float: right;
-//    clear: right;
     box-sizing: border-box;
     padding: 0;
     padding-right: 12px;
