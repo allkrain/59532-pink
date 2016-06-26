@@ -266,6 +266,7 @@
   }
 
   &:focus {
+    outline: none;
     border-color: $pink;
   }
 
@@ -533,38 +534,12 @@
 
 .contest-request__btn {
   margin-bottom: 34px;
-//  padding: 18px 20px;
-//  font-size: 18px;
-//  font-weight: bold;
-//  line-height: 30px;
-//  color: $white;
-//  text-transform: uppercase;
-//  text-align: center;
-//  border: none;
-//  background-color: $green-btn-bg-color;
 
   @media #{$tablet} {
     margin-right: auto;
     margin-bottom: 0;
     width: 300px;
   }
-
-//  &:hover {
-//    background-color: #1c9b5e;
-//  }
-//
-//  &:active {
-//    color: rgba($white, 0.3);
-//    background-color: #1c9b5e;
-//  }
-//
-//  &:disabled,
-//  &--disabled,
-//  &--disabled:hover,
-//  &--disabled:active
-//  {
-//    background-color: $table-border-color;
-//  }
 }
 
 input[class*="checkbox"]:checked + label[class*="checkbox"]::after {
