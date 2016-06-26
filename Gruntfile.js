@@ -142,7 +142,7 @@ module.exports = function(grunt) {
   grunt.registerTask("build", [
     "clean",
     "copy",
-    "less",
+    "sass",
     "postcss",
     "csso",
     "symbols",
