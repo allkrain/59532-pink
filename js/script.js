@@ -1,7 +1,7 @@
 //меню
 
-var navMain = document.querySelector(".main-menu");
-var navBtn = document.querySelector(".main-menu__btn");
+var navMain = document.querySelector('.main-menu');
+var navBtn = document.querySelector('.main-menu__btn');
 
 navMain.classList.remove('main-menu--nojs');
 navMain.classList.add('main-menu--close');
@@ -35,4 +35,36 @@ ymaps.ready(function () {
         });
 
     myMap.geoObjects.add(myPlacemark);
+});
+
+//валидатор формы
+
+var contestRequest = document.querySelector('.contest-request');
+var popupFailure = document.querySelector('.popup__message--failure');
+var popupSuccess = document.querySelector('.popup__message--success');
+var closeFailure = document.querySelector('.popup__btn--failure');
+var closeSuccess = document.querySelector('.popup__btn--success');
+var lastname = document.querySelector('#lastname');
+var name = document.querySelector('#name');
+var telephone = document.querySelector('#telephone');
+var email = document.querySelector('#email');
+var message = document.querySelector('#story');
+
+contestRequest.addEventListener('submit', function(event) {
+  if(!lastname.value || !name.value || !telephone.value || !email.value || !message.value) {
+    event.preventDefault();
+    popupFailure.classList.add('popup__message--on');
+  } else {
+    popupSuccess.classList.add('popup__message--on');
+  }
+});
+
+closeFailure.addEventListener('click', function(event){
+  event.preventDefault();
+  popupFailure.classList.remove('popup__message--on');
+});
+
+closeSuccess.addEventListener('click', function(event){
+  event.preventDefault();
+  popupFailure.classList.remove('popup__message--on');
 });
