@@ -7,14 +7,16 @@
   line-height: 0;
 
   &--header {
-    fill: $white;
+    svg {
+      fill: $white;
+    }
 
     @media #{$only-mobile-and-tablet} {
-      &:hover {
+      &:hover svg {
         fill: $pink;
       }
 
-      &:active {
+      &:active svg {
         fill: $white;
         opacity: 0.3;
       }
@@ -23,14 +25,16 @@
 
   &--footer {
     padding: 0;
-    fill: $gray-font-color;
+    svg {
+      fill: $gray-font-color;
+    }
 
     @media #{$only-mobile-and-tablet} {
-      &:hover {
+      &:hover svg {
         fill: $pink;
       }
 
-      &:active {
+      &:active svg {
         fill: $gray-font-color;
         opacity: 0.3;
       }

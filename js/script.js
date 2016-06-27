@@ -30,7 +30,7 @@ ymaps.ready(function () {
       balloonContent: 'Pink'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '../../img/icon-map-marker.svg',
+      iconImageHref: '../img/icon-map-marker.svg',
       iconImageSize: [36, 46]
     });
   myMap.geoObjects.add(myPlacemark);
