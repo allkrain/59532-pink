@@ -11,3 +11,10 @@ body {
 .visually-hidden{
   display: none;
 }
+
+.svg-wrapper {
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+

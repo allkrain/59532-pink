@@ -43,8 +43,6 @@
   }
 
   @media #{$tablet} {
-    @include inline-block;
-
     flex-direction: column;
     justify-content: space-between;
   }
@@ -69,14 +67,12 @@
     margin-bottom: 0;
     width: 25px;
     height: 25px;
-    background-size: 25px 25px;
   }
 
   @media #{$desktop} {
     margin-bottom: 10px;
     width: 48px;
     height: 48px;
-    background-size: auto;
   }
 
   &--crop {
@@ -103,6 +99,10 @@
       padding: 0;
       margin-right: 0;
     }
+
+    @media #{$desktop} {
+      margin-bottom: 0;
+    }
   }
 
   &:hover {
@@ -114,10 +114,12 @@
   }
 
   &--active {
-    fill: $pink;
-
-    &:hover {
+    @media #{$only-mobile} {
       fill: $pink;
+
+      &:hover {
+        fill: $pink;
+      }
     }
   }
 }
@@ -175,7 +177,7 @@
 .filters__range-item {
   padding: 0;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
   background: transparent;
 
   @media #{$only-mobile} {
@@ -195,13 +197,13 @@
   }
 
   &::-webkit-slider-thumb {
-    appearance: none;
-    width: 10px;
-    height: 10px;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     border: 2px solid $pink;
     background-color: #f2f2f2;
-    margin-top: -5px;
+    margin-top: -7px;
     cursor: pointer;
   }
 
