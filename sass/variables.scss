@@ -10,4 +10,8 @@ $gray-font-color: #283645;
 $black: #000;
 $white: #fff;
 $table-border-color: #e5e5e5;
+$tablet: (min-width: 700px);
+$desktop: (min-width: 1200px);
+$only-mobile: (max-width: 699px);
+$only-mobile-and-tablet: (max-width: 1199px);
 $retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);

@@ -1,71 +1,71 @@
 .download-block {
-
-  padding: 28px 0;
-  padding-bottom: 24px;
+  box-sizing: border-box;
+  padding: 26px 0;
+  padding-bottom: 22px;
   min-width: 320px;
   background-color: $download-bg-color;
   text-align: center;
-}
 
-.download-block h2 {
-  display: none;
-}
+  @media #{$tablet} {
+    @include centering;
 
-.download-block p {
-  @include font($fweight: 300, $fcolor: $white);
-
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-.download-block__wrapper {
-  @include centering();
-}
-
-
-@media (min-width: 700px) {
-  .download-block {
-    @include centering();
-
+    box-sizing: border-box;
     position: relative;
     margin-top: -619px;
-    margin-bottom: 40px;
-    padding: 64px 0;
+    padding:0;
     padding-top: 94px;
+    height: 619px;
     background-color: transparent;
     z-index: 10;
   }
-  .download-block__wrapper {
-    width: 300px;
-    margin-left: 0;
-  }
 
-  .download-block h2 {
-    @include font(40px, 50px, 300, $white);
-
-    display: block;
-    margin-top: 0;
-    margin-bottom: 24px;
-    padding: 0 50px;
-  }
-
-  .download-block p {
+  @media #{$desktop} {
+    margin-top: -745px;
     margin-bottom: 0;
-    font-size: 18px;
+    padding-top: 110px;
+    height: 745px;
+  }
+
+  h2 {
+    display: none;
+
+    @media #{$tablet} {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 30px;
+      padding: 0 50px;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 48px;
+      color: $white;
+    }
+
+    @media #{$desktop} {
+      padding: 0;
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 50px;
+    }
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 300;
+    color: $white;
+
+    @media #{$tablet} {
+      margin-bottom: 0;
+      font-size: 18px;
+    }
   }
 }
 
-@media (min-width: 1200px) {
-  .download-block {
-    padding: 112px 0;
-    margin-top: -745px;
-    margin-bottom: 0;
-  }
+.download-block__wrapper {
+  @include centering;
 
-  .download-block h2 {
-    padding: 0;
-    font-size: 50px;
-    line-height: 60px;
-    margin-bottom: 50px;
+  @media #{$tablet} {
+    width: 300px;
+    margin-left: 0;
   }
 }

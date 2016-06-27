@@ -1,110 +1,135 @@
 .information {
-  @include font();
-
+  position: relative;
   min-width: 320px;
-  padding-bottom: 290px;
-  background: {
-    color: $stripe-bg-color;
-    image: url('../img/iphone-screen-mobile@1x.png');
-    repeat: no-repeat;
-    position: 50% 106%;
-  }
+  background-color: $stripe-bg-color;
   text-align: center;
+}
+
+.information__wrapper {
+  @include centering;
+
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 290px;
+  background-image: url('../img/iphone-screen-mobile@1x.png');
+  background-repeat: no-repeat;
+  background-position: 50% 109%;
+
 
   @media #{$retina} {
     background-image: url('../img/iphone-screen-mobile@2x.png');
   }
-}
 
-.information__wrapper {
-  @include centering();
-
-  padding-top: 78px;
-}
-
-.information__slogan {
-  @include font(24px, normal, 300);
-
-  margin: 0 auto;
-  padding: 32px;
-  color: $gray-font-color;
-  background-color: $white;
-}
-
-.information__slogan span {
-  display: block;
-
-  &:first-child {
-    margin: {
-      top: 4px;
-      bottom: 20px;
-    }
-  }
-}
-
-.information__item {
-  margin-bottom: 30px;
-}
-
-.information__item h3 {
-  @include font(18px, 24px, bold);
-
-  margin: 0;
-  margin-bottom: 12px;
-  color: $black;
-}
-
-.information__item p {
-  @include font();
-
-  margin: 0;
-  color: $gray-font-color;
-}
-
-@media (min-width: 700px) {
-  .information {
-    padding-bottom: 1px;
-    background: {
-      image: url('../img/iphone-screen-3-tablet@1x.png');
-      repeat: no-repeat;
-      position: 10% 100%;
-    }
+  @media #{$tablet} {
+    box-sizing: border-box;
+    padding-top: 72px;
+    padding-bottom: 0;
+    min-height: 482px;
+    background-image: url('../img/iphone-screen-3-tablet@1x.png');
+    background-position: 0 0;
+    z-index: 1;
 
     @media #{$retina} {
       background-image: url('../img/iphone-screen-3-tablet@2x.png');
     }
   }
 
-  .information__wrapper {
-    padding-top: 70px;
-    padding-bottom: 42px;
-  }
+  @media #{$desktop} {
+    @include clearfix;
 
-  .information__slogan {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    background-image: none;
+
+  }
+}
+
+.information__slogan {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 32px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  color: $gray-font-color;
+  background-color: $white;
+
+  @media #{$tablet} {
     position: relative;
     padding: 48px 10px;
     font-size: 40px;
-    line-height: 50px;
+    line-height: 49px;
   }
 
-  .information__slogan span {
+  @media #{$desktop} {
+    padding: 68px 10px;
+    padding-top: 60px;
+    padding-bottom: 74px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    background: linear-gradient(to bottom right, $white 50%, transparent 50%);
+
+    @media #{$tablet} {
+      height: 58px;
+    }
+
+    @media #{$desktop} {
+      height: 96px;
+    }
+  }
+
+  span {
+    display: block;
 
     &:first-child {
-      margin: {
-        top: 0;
-        bottom: 0;
+      margin-bottom: 26px;
+    }
+
+    @media #{$tablet} {
+      &:first-child {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        padding-left: 145px;
+        padding-right: 145px;
       }
     }
 
-    &:last-child {
-      padding: {
-        left: 145px;
-        right: 145px;
+    @media #{$desktop} {
+      &:first-child {
+        margin-top: 6px;
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        padding-left: 260px;
+        padding-right: 260px;
       }
     }
   }
+}
 
-  .information__item {
+.information__item {
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  color: $gray-font-color;
+
+  @media #{$tablet} {
     margin-left: 310px;
     margin-bottom: 34px;
     text-align: left;
@@ -113,82 +138,73 @@
       margin-bottom: 0;
     }
   }
-}
 
-@media (min-width: 1200px) {
-  .information {
-    padding-bottom: 1px;
-    background-image: none;
-  }
+  @media #{$desktop} {
+    @include inline-block;
 
-  .information__wrapper {
-    padding-top: 300px;
-    padding-bottom: 0;
+    box-sizing: border-box;
+    width: 33%;
+    margin: 0 auto;
+    margin-bottom: 68px;
+    padding: 0 30px;
+    padding-top: 360px;
+    background-color: $stripe-bg-color;
     text-align: center;
-    background: {
-      image:
-        url('../img/iphone-screen-1-desktop@1x.png'),
-        url('../img/iphone-screen-2-desktop@1x.png'),
-        url('../img/iphone-screen-3-desktop@1x.png');
-      repeat: no-repeat;
-      position: 0% 0%, 50% 0%, 100% 0%;
-    }
+    background-image: url('../img/iphone-screen-2-desktop@1x.png');
+    background-repeat: no-repeat;
+    background-position: 60% 0%;
 
     @media #{$retina} {
-      background-image:
-        url('../img/iphone-screen-1-desktop@2x.png'),
-        url('../img/iphone-screen-2-desktop@2x.png'),
-        url('../img/iphone-screen-3-desktop@2x.png');
+      background-image: url('../img/iphone-screen-2-desktop@2x.png');
     }
-  }
-
-  .information__slogan {
-    position: relative;
-    padding: 68px 10px;
-    font-size: 50px;
-    line-height: 60px;
-  }
-
-  .information__slogan span {
 
     &:first-child {
-      margin: {
-        top: 6px;
-        bottom: 0;
+      float: left;
+      margin-left: 0;
+      background-image: url('../img/iphone-screen-1-desktop@1x.png');
+      background-position: 20% 0;
+
+      @media #{$retina} {
+        background-image: url('../img/iphone-screen-1-desktop@2x.png');
+
       }
     }
 
     &:last-child {
-      padding: {
-        left: 260px;
-        right: 260px;
+      float: right;
+      margin-right: 0;
+      background-image: url('../img/iphone-screen-3-desktop@1x.png');
+      background-position: 90% 0;
+
+      @media #{$retina} {
+        background-image: url('../img/iphone-screen-3-desktop@2x.png');
       }
     }
   }
 
-  .information__item {
-    display: inline-block;
-    vertical-align: top;
-    width: 26%;
-    margin-left: 7%;
-    margin-bottom: 68px;
-    padding-top: 60px;
-    background-color: $stripe-bg-color;
-    text-align: center;
+  h3 {
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    color: $black;
 
-    &:first-child {
-      margin-left: 0;
+    @media #{$desktop} {
+      margin-bottom: 23px;
+      font-size: 30px;
+      line-height: 30px;
     }
   }
 
-  .information__item h3 {
-    margin-bottom: 23px;
-    font-size: 30px;
-    line-height: 30px;
-  }
+  p {
+    margin: 0;
+    color: inherit;
 
-  .information__item p {
-    font-size: 18px;
-    line-height: 30px;
+    @media #{$desktop} {
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 }
+

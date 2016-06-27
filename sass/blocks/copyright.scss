@@ -1,5 +1,9 @@
 .copyright {
-  @include font(14px, 18px);
+  line-height: 18px;
+
+  @media #{$desktop} {
+    font-size: 18px;
+  }
 }
 
 .copyright span {
@@ -11,10 +15,15 @@
 .copyright__link {
   display: inline-block;
   vertical-align: middle;
-}
+  width: 27px;
+  height: 34.1px;
+  fill: $pink;
 
-@media (min-width: 1200px) {
-  .copyright {
-    font-size: 18px;
+  &:hover {
+    fill: $gray-font-color;
+  }
+
+  &:active {
+    fill: rgba($gray-font-color, 0.3);
   }
 }
