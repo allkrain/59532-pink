@@ -23,6 +23,12 @@
     background-image: url('../img/bg-back-desktop@1x.jpg');
   }
 
+  &--open {
+    @media #{$only-mobile} {
+      background-position: 50% 326px;
+    }
+  }
+
   h1 {
     @include centering;
 
@@ -85,7 +91,7 @@
     background-image:
         url('../img/iphone-hand-desktop@1x.png'),
         url('../img/bg-back-desktop@1x.jpg');
-    background-position: 70% 100%, 50% 50%;
+    background-position: 95% 100%, 50% 50%;
 
     @media #{$retina} {
       background-image:

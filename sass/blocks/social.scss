@@ -1,11 +1,15 @@
 .social {
   @media #{$tablet} {
-    margin-left: 74px;
-    margin-right: auto;
+    padding-right: 20px;
   }
 
   @media #{$desktop} {
-    margin: 0;
+    padding-right: 0;
+    padding-left: 20px;
+
+    .main-footer__main-page & {
+      padding-left: 4px;
+    }
   }
 }
 

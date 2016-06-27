@@ -8,7 +8,7 @@
     background-color: rgba($black, 0.3);
   }
 
-  &--open {
+  .main-header--open & {
     @media #{$only-mobile} {
       margin-bottom: 70px;
     }
@@ -57,7 +57,6 @@
 
   @media #{$desktop} {
     position: static;
-    display: inline-block;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -65,11 +64,11 @@
   }
 
   @media #{$only-mobile-and-tablet} {
-    .main-menu--open & {
+    .main-header--open & {
       display: block;
     }
 
-    .main-menu--close & {
+    .main-header--close & {
       display: none;
     }
   }
@@ -144,11 +143,11 @@
     text-align: left;
 
     @media #{$only-mobile-and-tablet} {
-      .main-menu--open & {
+      .main-header--open & {
         background-color: $menuopen-bg-color;
       }
 
-      .main-menu--close & {
+      .main-header--close & {
         background-color: rgba($black, 0.3);
       }
     }
@@ -202,7 +201,7 @@
   }
 
   @media #{$only-mobile-and-tablet} {
-    .main-menu--open & {
+    .main-header--open & {
       display: block;
 
       &::before,
@@ -236,7 +235,7 @@
       }
     }
 
-    .main-menu--close & {
+    .main-header--close & {
       display: block;
       position: relative;
       background-color: $white;

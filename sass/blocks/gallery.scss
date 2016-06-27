@@ -48,19 +48,14 @@
   flex-direction: column;
   align-items: stretch;
   text-align: center;
-
-  @media #{$only-mobile} {
-    margin: 0 auto;
-    width: 280px;
-  }
+  margin: 0 auto;
+  width: 280px;
 
   @media #{$tablet} {
     @include inline-block;
-    width: 300px;
 
-    &:nth-child(even) {
-      margin-right: 0;
-    }
+    margin: 0;
+    width: 300px;
   }
 
   @media #{$desktop} {
@@ -73,6 +68,11 @@
     width: 100%;
 
     @media #{$tablet} {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    @media #{$desktop} {
       margin-bottom: 12px;
     }
 
