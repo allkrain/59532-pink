@@ -251,6 +251,30 @@
       width: 40.2%;
     }
   }
+
+  .contest-request__fullname & {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-left: 0;
+    width: 100%;
+
+    @media #{$tablet} {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    span {
+      margin-bottom: 6px;
+      padding-left: 22px;
+
+      @media #{$tablet} {
+        margin-right: 20px;
+        margin-bottom: 0;
+        padding-left: 0;
+      }
+    }
+  }
 }
 
 .contest-request__text-field {
@@ -329,16 +353,6 @@
     padding: 0;
     width: 46.2%;
   }
-
-  label {
-    @media #{$tablet} {
-      align-self: center;
-      margin-bottom: 0;
-      margin-right: 20px;
-      padding-left: 0;
-    }
-  }
-
 }
 
 .contest-request__checkbox,
