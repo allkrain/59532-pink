@@ -157,7 +157,7 @@
       background-image: url('../img/iphone-screen-2-desktop@2x.png');
     }
 
-    &:first-child {
+    &:nth-child(3n+1) {
       float: left;
       margin-left: 0;
       background-image: url('../img/iphone-screen-1-desktop@1x.png');
@@ -169,7 +169,7 @@
       }
     }
 
-    &:last-child {
+    &:nth-child(3n) {
       float: right;
       margin-right: 0;
       background-image: url('../img/iphone-screen-3-desktop@1x.png');

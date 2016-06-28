@@ -42,6 +42,7 @@
 }
 
 .review__item {
+  display: none;
   margin: 0;
   padding: 42px 0;
   padding-bottom: 35px;
@@ -63,6 +64,10 @@
     background-image: url("../img/icon-quotes.svg");
     background-repeat: no-repeat;
     background-position: 50% 72px;
+  }
+
+  &--current {
+    display: block;
   }
 }
 
