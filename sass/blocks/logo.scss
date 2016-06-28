@@ -83,13 +83,19 @@
 }
 
 .logo__pink {
-  display: inline;
-
-  &--header {
-    transform: translate(-72px, -17px);
+  &--header-mobile {
+    display: inline;
 
     @media #{$tablet} {
-      transform: none;
+      display: none;
+    }
+  }
+
+  &--header {
+    display: none;
+
+    @media #{$tablet} {
+      display: inline;
     }
   }
 }

@@ -17,12 +17,13 @@
 
 .main-menu__wrapper {
   @media #{$desktop} {
-    @include centering;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
+    width: 88.7%;
+    max-width: 940px;
   }
 }
 
@@ -164,6 +165,10 @@
 
       &:hover {
         border-bottom: none;
+      }
+
+      &:active {
+        margin-bottom: 0;
       }
     }
   }
