@@ -13,11 +13,10 @@
   padding-bottom: 290px;
   background-image: url('../img/iphone-screen-mobile@1x.png');
   background-repeat: no-repeat;
-  background-position: 50% 109%;
+  background-position: 50% 110%;
   background-size: 157px 330px;
 
-
-  @media #{$retina} {
+  @media (min-width: 320px) and #{$retina} {
     background-image: url('../img/iphone-screen-mobile@2x.png');
   }
 
@@ -28,6 +27,7 @@
     min-height: 482px;
     background-image: url('../img/iphone-screen-3-tablet@1x.png');
     background-position: 0 0;
+    background-size: 268px 481px;
     z-index: 1;
 
     @media #{$retina} {
@@ -42,7 +42,6 @@
     padding-bottom: 0;
     text-align: center;
     background-image: none;
-
   }
 }
 

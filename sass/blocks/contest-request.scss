@@ -131,9 +131,11 @@
 
   @media #{$desktop} {
     &--travel-action {
+      flex-direction: row;
+      justify-content: space-between;
       flex-wrap: wrap;
       align-content: space-between;
-      height: 176px;
+      min-height: 176px;
     }
 
     &--contacts {
@@ -187,6 +189,15 @@
 
     @media #{$tablet} {
       padding-left: 60px;
+    }
+
+    @media #{$desktop} {
+      box-sizing: border-box;
+      width: 33%;
+
+      &:nth-of-type(even) {
+        order: 1;
+      }
     }
 
     &::before {
