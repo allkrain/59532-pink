@@ -26,7 +26,7 @@
 
   &--open {
     @media #{$only-mobile} {
-      background-position: 50% 326px;
+      background-position: 0 100%, 50% 326px;
     }
   }
 
