@@ -1,10 +1,10 @@
 .popup {
   display: block;
   position: fixed;
-  top: 50vh;
-  left: 50vw;
+  top: 50%;
+  left: 50%;
   text-align: center;
-  transform: translate(-50%, -50% );
+  transform: translate(-50%, -50%);
   z-index: 20;
 }
 
@@ -35,7 +35,7 @@
     display: none;
     padding-bottom: 57px;
     height: 380px;
-    background-image: linear-gradient(to top, $stripe-bg-color 160px, $white  160px);
+    background-image: linear-gradient(to top, $stripe-bg-color 160px, $white 160px);
 
     @media #{$tablet} {
       height: 432px;

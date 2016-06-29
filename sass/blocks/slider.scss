@@ -50,7 +50,14 @@
 }
 
 .slider__arrow {
+
+  display: none;
+
   @media #{$desktop} {
+    border: 0;
+    background: transparent;
+    padding: 0;
+
     position: absolute;
     top: 63%;
     display: block;
