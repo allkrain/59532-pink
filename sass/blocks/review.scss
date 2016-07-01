@@ -61,7 +61,7 @@
     margin: 0;
     padding-top: 190px;
     padding-bottom: 96px;
-    background-image: url("../img/icon-quotes.svg");
+    background-image: url('../img/icon-quotes.svg');
     background-repeat: no-repeat;
     background-position: 50% 72px;
   }
@@ -98,6 +98,7 @@
   display: none;
   margin: 0;
   line-height: 30px;
+  color: $gray-font-color;
 
   @media #{$tablet} {
     display: block;

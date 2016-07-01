@@ -72,7 +72,6 @@
   }
 
   @media #{$tablet} {
-    float: left;
     padding: 0;
     width: 300px;
   }
@@ -90,7 +89,6 @@
 
 .upload-block__filters {
   @media #{$tablet} {
-    float: right;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -113,7 +111,6 @@
   }
 
   @media #{$tablet} {
-    float: right;
     box-sizing: border-box;
     padding: 0;
     padding-right: 12px;

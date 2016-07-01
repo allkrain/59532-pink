@@ -193,8 +193,7 @@
 
     @media #{$desktop} {
       box-sizing: border-box;
-      width: 33%;
-      margin-right: 0.5%;
+      max-width: 33%;
 
       &:nth-of-type(even) {
         order: 1;
@@ -203,10 +202,18 @@
       &:nth-of-type(3n) {
         margin-right: 0;
       }
+
+      &:nth-of-type(2) {
+        padding-right: 26px;
+      }
+
+      &:nth-of-type(5) {
+        padding-right: 5px;
+      }
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -238,7 +245,7 @@
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -421,12 +428,14 @@
 
   input {
     @media #{$tablet} {
+      box-sizing: border-box;
+      height: 62px;
       padding-right: 60px;
       margin-bottom: 10px;
 
     }
 
-    &[id="email"] {
+    &[id='email'] {
       @media #{$tablet} {
         order: 2;
       }
@@ -453,7 +462,7 @@
       }
     }
 
-    &[for="telephone"] {
+    &[for='telephone'] {
 
       @media #{$tablet} {
         order: 1;
@@ -470,7 +479,7 @@
       }
     }
 
-    &[for="email"] {
+    &[for='email'] {
       @media #{$tablet} {
         order: 3;
 
@@ -564,6 +573,14 @@
   color: $pink;
 }
 
+.contest-request__note-expand {
+  display: none;
+
+  @media #{$desktop} {
+    display: inline;
+  }
+}
+
 .contest-request__btn {
   margin-bottom: 34px;
 
@@ -574,7 +591,7 @@
   }
 }
 
-input[class*="checkbox"]:checked + label[class*="checkbox"]::after {
+input[class*='checkbox']:checked + label[class*='checkbox']::after {
   content: '';
   position: absolute;
   top: 10px;
@@ -587,8 +604,8 @@ input[class*="checkbox"]:checked + label[class*="checkbox"]::after {
   transform: translateX(-50%) rotate(-45deg);
 }
 
-input[class*="radio"]:checked + label[class*="radio"]::after {
-  content: "";
+input[class*='radio']:checked + label[class*='radio']::after {
+  content: '';
   position: absolute;
   top: 13px;
   left: 13px;

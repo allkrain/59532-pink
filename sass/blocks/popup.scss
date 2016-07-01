@@ -10,8 +10,7 @@
 
 .popup__message {
   box-sizing: border-box;
-  padding: 36px 20px;
-  padding-bottom: 50px;
+  padding: 40px 20px;
   width: 320px;
   background-color: $white;
   box-shadow: 0 7px 15px 0 rgba($black, 0.15);
@@ -44,7 +43,8 @@
 
     @media #{$desktop} {
       width: 780px;
-      padding: 70px 160px;
+      height: 380px;
+      padding: 42px 160px;
     }
   }
 
@@ -62,20 +62,17 @@
   color: $black;
 
   @media #{$tablet} {
-    margin-bottom: 16px;
+    margin-bottom: 22px;
+    padding: 0 20px;
     font-size: 30px;
     line-height: 40px;
-  }
-
-  .popup__message--success & {
-    @media #{$desktop} {
-      margin-bottom: 30px;
-    }
   }
 }
 
 .popup__content {
-  margin-bottom: 36px;
+  margin-bottom: 38px;
+  font-size: 14px;
+  line-height: 24px;
 
   @media #{$tablet} {
     margin-bottom: 38px;
@@ -83,10 +80,10 @@
   }
 
   .popup__message--success & {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
 
     @media #{$desktop} {
-      margin-bottom: 82px;
+      margin-bottom: 84px;
     }
   }
 

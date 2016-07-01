@@ -14,7 +14,6 @@
   "homepage": "https://github.com/htmlacademy-adaptive/59532-pink",
   "devDependencies": {
     "autoprefixer": "6.3.6",
-    "css-mqpacker": "^5.0.1",
     "editorconfig-tools": "0.1.1",
     "grunt": "1.0.1",
     "grunt-browser-sync": "2.2.0",
