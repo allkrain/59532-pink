@@ -71,12 +71,12 @@
     margin: 0;
     margin-bottom: 10px;
   }
+}
 
-  .comment--panorama & {
-    @media #{$tablet} {
-      order: 2;
-      width: 100%;
-    }
+.comment--panorama .comment__content {
+  @media #{$tablet} {
+    order: 2;
+    width: 100%;
   }
 }
 
@@ -96,12 +96,12 @@
     padding-left: 0;
     background-position: 100% 50%;
   }
+}
 
-  .comment--panorama & {
-    @media #{$tablet} {
-      order: 1;
-      padding-right: 30px;
-      background-position: 100% 50%;
-    }
+.comment--panorama .comment__likes {
+  @media #{$tablet} {
+    order: 1;
+    padding-right: 30px;
+    background-position: 100% 50%;
   }
 }

@@ -49,8 +49,7 @@
   }
 
   td,
-  th
-  {
+  th {
     @media #{$desktop} {
       box-sizing: border-box;
       width: 25%;
@@ -191,11 +190,13 @@
 .price__feature-name {
   @media #{$tablet} {
     display: none;
+  }
+}
 
-    .price__feature--none & {
-      @include inline-block;
-      text-transform: none;
-    }
+.price__feature--none .price__feature-name {
+  @media #{$tablet} {
+    @include inline-block;
+    text-transform: none;
   }
 }
 
@@ -255,8 +256,7 @@
 
 .price__table-raw {
   td,
-  th
-  {
+  th {
     &:first-child {
       border-left-width: 2px;
     }

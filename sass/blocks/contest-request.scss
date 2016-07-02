@@ -265,37 +265,37 @@
       border-color: $pink;
     }
   }
+}
 
-  .contest-request__contacts & {
-    @media #{$desktop} {
-      margin-bottom: 14px;
-      padding-left: 20px;
-      padding-right: 26px;
-      width: 40.2%;
-    }
+.contest-request__contacts .contest-request__label {
+  @media #{$desktop} {
+    margin-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 26px;
+    width: 40.2%;
+  }
+}
+
+.contest-request__fullname .contest-request__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+
+  @media #{$tablet} {
+    flex-direction: row;
+    align-items: center;
   }
 
-  .contest-request__fullname & {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0;
-    padding-left: 0;
-    width: 100%;
+  span {
+    margin-bottom: 6px;
+    padding-left: 22px;
 
     @media #{$tablet} {
-      flex-direction: row;
-      align-items: center;
-    }
-
-    span {
-      margin-bottom: 6px;
-      padding-left: 22px;
-
-      @media #{$tablet} {
-        margin-right: 20px;
-        margin-bottom: 0;
-        padding-left: 0;
-      }
+      margin-right: 20px;
+      margin-bottom: 0;
+      padding-left: 0;
     }
   }
 }
@@ -330,28 +330,28 @@
       min-height: 96px;
     }
   }
+}
 
-  .contest-request__fullname & {
-    @media #{$tablet} {
-      flex-grow: 1;
-      min-width: 75%;
-      margin: 29px 0;
-      margin-bottom: 26px;
-    }
-
-    @media #{$desktop} {
-      min-width: 60%;
-      margin: 29px 0;
-      margin-bottom: 24px;
-    }
+.contest-request__fullname .contest-request__text-field {
+  @media #{$tablet} {
+    flex-grow: 1;
+    min-width: 75%;
+    margin: 29px 0;
+    margin-bottom: 26px;
   }
 
-  .contest-request__contacts & {
-    @media #{$desktop} {
-      box-sizing: border-box;
-      margin-bottom: 10px;
-      width: 45.8%;
-    }
+  @media #{$desktop} {
+    min-width: 60%;
+    margin: 29px 0;
+    margin-bottom: 24px;
+  }
+}
+
+.contest-request__contacts .contest-request__text-field {
+  @media #{$desktop} {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 45.8%;
   }
 }
 

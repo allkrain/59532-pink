@@ -39,14 +39,13 @@
   &:active {
     background-color: rgba($gray-font-color, 0.1);
   }
+}
 
-  .slider__input:checked + &,
-  .slider__input:checked + &:hover,
-  .slider__input:checked + &:active
-  {
-    background-color: $white;
-    border-color: $gray-font-color;
-  }
+.slider__input:checked + .slider__toggle,
+.slider__input:checked + .slider__toggle:hover,
+.slider__input:checked + .slider__toggle:active {
+  background-color: $white;
+  border-color: $gray-font-color;
 }
 
 .slider__arrow {
@@ -80,8 +79,7 @@
     }
 
     &--left,
-    &--right
-    {
+    &--right {
       &:hover {
         border-color: rgba($gray-font-color, 0.6);
       }

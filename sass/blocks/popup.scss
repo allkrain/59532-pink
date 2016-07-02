@@ -79,17 +79,17 @@
     font-size: 18px;
   }
 
-  .popup__message--success & {
-    margin-bottom: 80px;
-
-    @media #{$desktop} {
-      margin-bottom: 84px;
-    }
-  }
-
   p {
     margin: 0;
     padding: 0;
+  }
+}
+
+.popup__message--success .popup__content {
+  margin-bottom: 80px;
+
+  @media #{$desktop} {
+    margin-bottom: 84px;
   }
 }
 
