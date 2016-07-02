@@ -287,16 +287,16 @@
     flex-direction: row;
     align-items: center;
   }
+}
 
-  span {
-    margin-bottom: 6px;
-    padding-left: 22px;
+.contest-request__label-name {
+  margin-bottom: 6px;
+  padding-left: 22px;
 
-    @media #{$tablet} {
-      margin-right: 20px;
-      margin-bottom: 0;
-      padding-left: 0;
-    }
+  @media #{$tablet} {
+    margin-right: 20px;
+    margin-bottom: 0;
+    padding-left: 0;
   }
 }
 

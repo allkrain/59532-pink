@@ -271,60 +271,32 @@
       border-bottom-width: 2px;
     }
   }
+}
 
-  @media #{$only-mobile} {
-    & *[class*='--none'] {
+@media #{$only-mobile} {
+  th[class*='--none'],
+  td[class*='--none']{
+    display: none;
+  }
+
+  th[class*='--base'],
+  th[class*='--unlim'],
+  td[class*='--base'],
+  td[class*='--unlim'] {
+    padding: 10px;
+
+    span,
+    b
+    {
       display: none;
     }
+  }
 
-    &--slide-1 *[class*='--standart'],
-    &--slide-1 *[class*='--unlim']
-    {
-      padding: 10px;
-
-      span,
-      b
-      {
-        display: none;
-      }
-    }
-
-    &--slide-1 *[class*='--base'] {
-      width: 100%;
-    }
-
-    &--slide-2 *[class*='--base'],
-    &--slide-2 *[class*='--unlim']
-    {
-      padding: 10px;
-
-      span,
-      b
-      {
-        display: none;
-      }
-    }
-
-    &--slide-2 *[class*='--standart'] {
-      width: 100%;
-    }
-
-    &--slide-3 *[class*='--standart'],
-    &--slide-3 *[class*='--base']
-    {
-      padding: 10px;
-
-      span,
-      b
-      {
-        display: none;
-      }
-    }
-
-    &--slide-3 *[class*='--unlim'] {
-      width: 100%;
-    }
+  th[class*='--standart'],
+  td[class*='--standart'] {
+    width: 100%;
   }
 }
+
 
 
