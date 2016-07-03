@@ -12,8 +12,7 @@
   background-color: transparent;
 
   &:hover,
-  &:active
-  {
+  &:active {
     outline: none;
   }
 
@@ -109,8 +108,7 @@
     &:disabled,
     &--disabled,
     &--disabled:hover,
-    &--disabled:active
-    {
+    &--disabled:active {
       background-color: $table-border-color;
     }
   }

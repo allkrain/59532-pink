@@ -217,8 +217,7 @@
     display: block;
 
     &::before,
-    &::after
-    {
+    &::after {
       content: '';
       position: absolute;
       top: calc(50% - 2px);
@@ -235,14 +234,12 @@
     }
 
     &:hover::before,
-    &:hover::after
-    {
+    &:hover::after {
       background-color: $pink;
     }
 
     &:active::before,
-    &:active::after
-    {
+    &:active::after {
       background-color: rgba($pink, 0.3);
     }
   }
@@ -255,8 +252,7 @@
     background-color: $white;
 
     &::before,
-    &::after
-    {
+    &::after {
       content: '';
       position: absolute;
       right: 0;
@@ -276,15 +272,13 @@
 
     &:hover,
     &:hover::before,
-    &:hover::after
-    {
+    &:hover::after {
       background-color: $pink;
     }
 
     &:active,
     &:active::before,
-    &:active::after
-    {
+    &:active::after {
       background-color: rgba($pink, 0.3);
     }
   }
